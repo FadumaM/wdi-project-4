@@ -45,7 +45,7 @@ Categories
     Poker
     Video_Games
     Birdwatching
-  ]
+  ].done
 
 
   FoodAndDrink = [
@@ -55,7 +55,7 @@ Categories
     Spirits_/_Liquor_Tasting
     Tea_Drinking
     Wine_Tasting
-  ]
+  ].done
 
 
   Languages = [
@@ -65,8 +65,8 @@ Categories
     Poetry
     Screenwriting
     Songwriting
-    Poetry
-  ]
+    languages
+  ].done
 
   Performance = [
 
@@ -76,7 +76,7 @@ Categories
     Start_A_Band
     Improv_Comedy
     Become_A_Clown  
-  ]
+  ].done
 
   Dancing = [
     Break_Dancing_
@@ -85,7 +85,7 @@ Categories
     Salsa
     Swing
     Tango
-  ]
+  ].done
 
   Music  = [
     Blues

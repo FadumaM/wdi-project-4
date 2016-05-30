@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
+var categoryAnswer = require('./categoryAnswer');
 
 var categorySchema  = new mongoose.Schema ({
    name : {type: String},
-   categoryAnswer: {type: categoryAnswerSchema}
+   categoryAnswer: {type: categoryAnswer.schema }
 });
 
 
