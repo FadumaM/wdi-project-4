@@ -1,4 +1,4 @@
-var Hobby   = require("../model/hobby");
+var Hobby   = require("../models/hobby");
 
 
   function HobbyIndex(req, res) {

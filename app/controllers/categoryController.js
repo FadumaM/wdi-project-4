@@ -1,4 +1,4 @@
-var Category   = require("../model/hobby");
+var Category   = require("../models/category");
 
 function CategoryIndex(req, res) {
   Hobby.find(function(err, users){
@@ -16,7 +16,7 @@ function CategoryShow(req, res) {
 }
 
 
-module.export = {
-  index : Categoryindex,
-  show  : Categoryindex
+module.exports = {
+  index : CategoryIndex,
+  show  : CategoryShow
 };

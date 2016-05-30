@@ -50393,6 +50393,38 @@ angular
         templateUrl: "/src/js/views/authentication/register.html",
         controller: "UsersController",
         controllerAs: "user"
+      })
+      .state('quizHome',{
+        url: '/quiz/home',
+        templateUrl: "/src/js/views/quiz/home.html"
+      })
+      .state('categoryFirstQuestion',{
+        url: '/quiz/1',
+        templateUrl: "/src/js/views/quiz/category/firstQuestion.html"
+      })
+      .state('categorySecondQuestion',{
+        url: '/quiz/2',
+        templateUrl: "/src/js/views/quiz/category/secondQuestion.html"
+      })
+      .state('categoryThirdQuestion',{
+        url: '/quiz/3',
+        templateUrl: "/src/js/views/quiz/category/thirdQuestion.html"
+      })
+      .state('hobbyFirstQuestion',{
+        url: '/quiz/4',
+        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html"
+      })
+      .state('hobbSecondQuestion',{
+        url: '/quiz/5',
+        templateUrl: "/src/js/views/quiz/hobby/secondQuestion.html"
+      })
+      .state('hobbThirdQuestion',{
+        url: '/quiz/6',
+        templateUrl: "/src/js/views/quiz/hobby/thirdQuestion.html"
+      })
+      .state('showHobby',{
+        url: '/hobby/show',
+        templateUrl: "/src/js/views/quiz/hobby/show.html"
       });
 
     $urlRouterProvider.otherwise("/");
@@ -50407,6 +50439,16 @@ angular
     }
 
 
+angular
+    .module('Hobbyist')
+    .controller('QuizController', QuizController);
+
+    QuizController.$inject = ['Hobby', 'Category'];
+
+    function QuizController(Hobby, Category) {
+
+
+    }
 
 angular
     .module('Hobbyist')
@@ -50488,7 +50530,41 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
   return self;
 }
 
+angular
+  .module('Hobbyist')
+  .factory('Category', Category);
 
+Category.$inject = ['$resource', 'API_URL'];
+function User($resource, API_URL){
+
+  return $resource(
+    API_URL+'/category/:id', {id: '@id'},
+    { 'get':       { method: 'GET' },
+      'save':      { method: 'POST' },
+      'query':     { method: 'GET', isArray: true},
+      'remove':    { method: 'DELETE' },
+      'delete':    { method: 'DELETE' },
+    }
+  );
+}
+
+angular
+  .module('Hobbyist')
+  .factory('Hobby', Hobby);
+
+Hobby.$inject = ['$resource', 'API_URL'];
+function User($resource, API_URL){
+
+  return $resource(
+    API_URL+'/hobbys/:id', {id: '@id'},
+    { 'get':       { method: 'GET' },
+      'save':      { method: 'POST' },
+      'query':     { method: 'GET', isArray: true},
+      'remove':    { method: 'DELETE' },
+      'delete':    { method: 'DELETE' },
+    }
+  );
+}
 
 angular
   .module('Hobbyist')

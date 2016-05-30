@@ -6,8 +6,8 @@ var router   = express.Router();
 
 var usersController             = require("../controllers/usersController");
 var authenticationsController   = require("../controllers/authenticationsController");
-var categoryController   = require("../controllers/categoryController");
-var hobbysController   = require("../controllers/hobbysController");
+var categoryController          = require("../controllers/categoryController");
+var hobbysController            = require("../controllers/hobbysController");
 
 
 //******* Routes ***********//

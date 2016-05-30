@@ -28,6 +28,38 @@ angular
         templateUrl: "/src/js/views/authentication/register.html",
         controller: "UsersController",
         controllerAs: "user"
+      })
+      .state('quizHome',{
+        url: '/quiz/home',
+        templateUrl: "/src/js/views/quiz/home.html"
+      })
+      .state('categoryFirstQuestion',{
+        url: '/quiz/1',
+        templateUrl: "/src/js/views/quiz/category/firstQuestion.html"
+      })
+      .state('categorySecondQuestion',{
+        url: '/quiz/2',
+        templateUrl: "/src/js/views/quiz/category/secondQuestion.html"
+      })
+      .state('categoryThirdQuestion',{
+        url: '/quiz/3',
+        templateUrl: "/src/js/views/quiz/category/thirdQuestion.html"
+      })
+      .state('hobbyFirstQuestion',{
+        url: '/quiz/4',
+        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html"
+      })
+      .state('hobbSecondQuestion',{
+        url: '/quiz/5',
+        templateUrl: "/src/js/views/quiz/hobby/secondQuestion.html"
+      })
+      .state('hobbThirdQuestion',{
+        url: '/quiz/6',
+        templateUrl: "/src/js/views/quiz/hobby/thirdQuestion.html"
+      })
+      .state('showHobby',{
+        url: '/hobby/show',
+        templateUrl: "/src/js/views/quiz/hobby/show.html"
       });
 
     $urlRouterProvider.otherwise("/");
