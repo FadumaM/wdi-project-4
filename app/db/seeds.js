@@ -1,6 +1,7 @@
 var CategoryAnswer = require("../models/categoryAnswer");
 var Category = require("../models/category");
 var Hobby = require("../models/hobby");
+var HobbyAnswer = require("../models/hobbyAnswer");
 var mongoose = require("mongoose");
 var config = require("../config/config");
 
@@ -113,6 +114,586 @@ var answers = {};
     if (err) return console.log(err);
     console.log("Category was saved!", answer);
   });
+
+  answers.ceramics_Pottery = new  HobbyAnswer ({
+    round1 : "First round ceramics_Pottery Hobby",
+    round2 : "Second round ceramics_Pottery Hobby"
+  });
+
+  answers.ceramics_Pottery.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.graffiti = new  HobbyAnswer ({
+    round1 : "First round graffiti Hobby",
+    round2 : "Second round graffiti Hobby"
+  });
+
+  answers.graffiti.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.knitting = new  HobbyAnswer ({
+    round1 : "First round  Knitting Hobby",
+    round2 : "Second round  Knitting Hobby"
+  });
+
+  answers.knitting.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.paintingAndDrawing = new  HobbyAnswer ({
+    round1 : "First round  Painting_and_Drawing Hobby",
+    round2 : "Second round  Painting_and_Drawing Hobby"
+  });
+
+  answers.paintingAndDrawing.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.sewing = new  HobbyAnswer ({
+    round1 : "First round  Sewing Hobby",
+    round2 : "Second round  Sewing Hobby"
+  });
+
+  answers.sewing.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.kiteFlyingMaking = new  HobbyAnswer ({
+    round1 : "First round  Kite_Flying_/_Making Hobby",
+    round2 : "Second round  Kite_Flying_/_Making Hobby"
+  });
+
+  answers.kiteFlyingMaking.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.cycling = new  HobbyAnswer ({
+    round1 : "First round  Cycling Hobby",
+    round2 : "Second round  Cycling Hobby"
+  });
+
+  answers.cycling.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.cycling = new  HobbyAnswer ({
+    round1 : "First round  Cycling Hobby",
+    round2 : "Second round  Cycling Hobby"
+  });
+
+  answers.cycling.save(function(err, answer) {
+    if (err) return console.log(err);
+    console.log("Hobby answer was saved!", answer);
+  });
+
+  answers.sailing = new  HobbyAnswer ({
+      round1 : "First round  Sailing Hobby",
+      round2 : "Second round  Sailing Hobby"
+    });
+
+    answers.sailing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Running
+  answers.running = new  HobbyAnswer ({
+      round1 : "First round  Running Hobby",
+      round2 : "Second round  Running Hobby"
+    });
+
+    answers.running.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Swimming
+  answers.swimming = new  HobbyAnswer ({
+      round1 : "First round  Swimming Hobby",
+      round2 : "Second round  Swimming Hobby"
+    });
+
+  answers.swimming.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Fishing
+  answers.fishing = new  HobbyAnswer ({
+      round1 : "First round  Fishing Hobby",
+      round2 : "Second round  Fishing Hobby"
+    });
+
+  answers.fishing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Rock_Climbing
+  answers.rockClimbing = new  HobbyAnswer ({
+      round1 : "First round  Rock_Climbing Hobby",
+      round2 : "Second round  Rock_Climbing Hobby"
+    });
+
+  answers.rockClimbing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Skydiving
+  answers.skyDiving = new  HobbyAnswer ({
+      round1 : "First round  Skydiving Hobby",
+      round2 : "Second round  Skydiving Hobby"
+    });
+
+  answers.skyDiving.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Skateboarding
+  answers.skateboarding = new  HobbyAnswer ({
+      round1 : "First round  Skateboarding Hobby",
+      round2 : "Second round  Skateboarding Hobby"
+    });
+
+  answers.skateboarding.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Surfing
+  answers.surfing = new  HobbyAnswer ({
+      round1 : "First round  Surfing Hobby",
+      round2 : "Second round  Surfing Hobby"
+    });
+
+  answers.surfing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  //Yoga
+  answers.yoga = new  HobbyAnswer ({
+      round1 : "First round  Yoga Hobby",
+      round2 : "Second round  Yoga Hobby"
+    });
+
+  answers.yoga.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Hiking
+  answers.hiking = new  HobbyAnswer ({
+      round1 : "First round  Hiking Hobby",
+      round2 : "Second round  Hiking Hobby"
+    });
+
+  answers.hiking.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Kayak_and_Canoe
+  answers.kayakAndCanoe = new  HobbyAnswer ({
+      round1 : "First round  Kayak_and_Canoe Hobby",
+      round2 : "Second round Kayak_and_Canoe Hobby"
+    });
+
+  answers.kayakAndCanoe.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Tai_Chi
+  answers.taiChi = new  HobbyAnswer ({
+      round1 : "First round  Tai_Chi Hobby",
+      round2 : "Second round  Tai_Chi Hobby"
+    });
+
+  answers.taiChi.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Capoeira
+  answers.capoeira = new  HobbyAnswer ({
+      round1 : "First round  Capoeira Hobby",
+      round2 : "Second round  Capoeira Hobby"
+    });
+
+  answers.capoeira.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Judo
+  answers.judo = new  HobbyAnswer ({
+      round1 : "First round  Judo Hobby",
+      round2 : "Second round  Judo Hobby"
+    });
+
+  answers.judo.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Kung_Fu
+  answers.kungFu = new  HobbyAnswer ({
+      round1 : "First round  Kung_Fu Hobby",
+      round2 : "Second round  Kung_Fu Hobby"
+    });
+
+  answers.kungFu.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Taekwondo
+  answers.taekwondo = new  HobbyAnswer ({
+      round1 : "First round  Taekwondo Hobby",
+      round2 : "Second round  Taekwondo Hobby"
+    });
+
+  answers.taekwondo.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Boxing
+  answers.boxing = new  HobbyAnswer ({
+      round1 : "First round  Boxing Hobby",
+      round2 : "Second round  Boxing Hobby"
+    });
+
+  answers.boxing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Comic_Books
+  answers.comicBooks = new  HobbyAnswer ({
+      round1 : "First round  Comic_Books Hobby",
+      round2 : "Second round  Comic_BooksHobby"
+    });
+
+  answers.comicBooks.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Chess
+  answers.chess = new  HobbyAnswer ({
+      round1 : "First round  chess Hobby",
+      round2 : "Second round  chessHobby"
+    });
+
+  answers.chess.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Dominoes
+  answers.dominoes = new  HobbyAnswer ({
+      round1 : "First round  dominoes Hobby",
+      round2 : "Second round  dominoes Hobby"
+    });
+
+  answers.dominoes.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Poker
+  answers.poker = new  HobbyAnswer ({
+      round1 : "First round  poker Hobby",
+      round2 : "Second round  poker Hobby"
+    });
+
+  answers.poker.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+
+  // Video_Games
+  answers.videoGames = new  HobbyAnswer ({
+      round1 : "First round  videoGames Hobby",
+      round2 : "Second round  videoGames Hobby"
+    });
+  answers.videoGames.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Birdwatching
+  answers.birdwatching = new  HobbyAnswer ({
+      round1 : "First round  Birdwatching Hobby",
+      round2 : "Second round  Birdwatching Hobby"
+    });
+  answers.birdwatching.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Beer_Brewing
+  answers.beerBrewing = new  HobbyAnswer ({
+      round1 : "First round  Beer_Brewing Hobby",
+      round2 : "Second round  Beer_Brewing Hobby"
+    });
+  answers.beerBrewing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Cheese_Tasting
+  answers.cheeseTasting = new  HobbyAnswer ({
+      round1 : "First round  cheeseTasting Hobby",
+      round2 : "Second round  cheeseTasting Hobby"
+    });
+  answers.cheeseTasting.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Cooking
+  answers.cooking = new  HobbyAnswer ({
+      round1 : "First round  cooking Hobby",
+      round2 : "Second round  cooking Hobby"
+    });
+  answers.cooking.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Spirits_/_Liquor_Tasting
+  answers.spiritsLiquorTasting = new  HobbyAnswer ({
+      round1 : "First round  spiritsLiquorTasting Hobby",
+      round2 : "Second round  spiritsLiquorTasting Hobby"
+    });
+  answers.spiritsLiquorTasting.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Tea_Drinking
+  answers.teaDrinking = new  HobbyAnswer ({
+      round1 : "First round  teaDrinking Hobby",
+      round2 : "Second round  teaDrinking Hobby"
+    });
+  answers.teaDrinking.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Wine_Tasting
+  answers.wineTasting = new  HobbyAnswer ({
+      round1 : "First round  wineTasting Hobby",
+      round2 : "Second round  wineTasting Hobby"
+    });
+  answers.wineTasting.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Sign_Language
+  answers.signLanguage = new  HobbyAnswer ({
+      round1 : "First round  signLanguage Hobby",
+      round2 : "Second round  signLanguage Hobby"
+    });
+  answers.signLanguage.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Creative_Writing
+  answers.creativeWriting = new  HobbyAnswer ({
+      round1 : "First round  creativeWriting Hobby",
+      round2 : "Second round  creativeWriting Hobby"
+    });
+  answers.creativeWriting.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Poetry
+  answers.poetry = new  HobbyAnswer ({
+      round1 : "First round  poetry Hobby",
+      round2 : "Second round  poetry Hobby"
+    });
+  answers.poetry.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Screenwriting
+  answers.screenWriting = new  HobbyAnswer ({
+      round1 : "First round  screenWriting Hobby",
+      round2 : "Second round  screenWriting Hobby"
+    });
+  answers.screenWriting.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Songwriting
+  answers.songWriting = new  HobbyAnswer ({
+      round1 : "First round  songWriting Hobby",
+      round2 : "Second round  songWritingHobby"
+    });
+  answers.songWriting.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // languages
+  answers.languages = new  HobbyAnswer ({
+      round1 : "First round  languages Hobby",
+      round2 : "Second round  languages Hobby"
+    });
+  answers.languages.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Acting
+  answers.acting = new  HobbyAnswer ({
+      round1 : "First round  acting Hobby",
+      round2 : "Second round  acting Hobby"
+    });
+  answers.acting.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Stand_Up_Comedy
+  answers.standUpComedy = new  HobbyAnswer ({
+      round1 : "First round  standUpComedy Hobby",
+      round2 : "Second round  standUpComedy Hobby"
+    });
+  answers.standUpComedy.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Rapping
+  answers.rapping = new  HobbyAnswer ({
+      round1 : "First round  rapping Hobby",
+      round2 : "Second round  rapping Hobby"
+    });
+  answers.rapping.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Start_A_Band
+  answers.startABand = new  HobbyAnswer ({
+      round1 : "First round  startABand Hobby",
+      round2 : "Second round  startABand Hobby"
+    });
+  answers.startABand.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Improv_Comedy
+  answers.improvComedy = new  HobbyAnswer ({
+      round1 : "First round  improvComedy Hobby",
+      round2 : "Second round  improvComedy Hobby"
+    });
+  answers.improvComedy.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Become_A_Clown
+  answers.becomeAClown = new  HobbyAnswer ({
+      round1 : "First round  becomeAClown Hobby",
+      round2 : "Second round  becomeAClown Hobby"
+    });
+  answers.becomeAClown.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Break_Dancing_
+  answers.breakDancing = new  HobbyAnswer ({
+      round1 : "First round  breakDancing Hobby",
+      round2 : "Second round  breakDancing Hobby"
+    });
+  answers.breakDancing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Line_Dancing
+  answers.lineDancing = new  HobbyAnswer ({
+      round1 : "First round lineDancing Hobby",
+      round2 : "Second round  lineDancing Hobby"
+    });
+  answers.lineDancing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Pole_Dancing
+  answers.poleDancing = new  HobbyAnswer ({
+      round1 : "First round poleDancing Hobby",
+      round2 : "Second round  poleDancing Hobby"
+    });
+  answers.poleDancing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Salsa
+  answers.salsa = new  HobbyAnswer ({
+      round1 : "First round salsa Hobby",
+      round2 : "Second round  salsa Hobby"
+    });
+  answers.salsa.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Swing
+  answers.swing = new  HobbyAnswer ({
+      round1 : "First round swing Hobby",
+      round2 : "Second round  swing Hobby"
+    });
+  answers.swing.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Tango
+  answers.tango = new  HobbyAnswer ({
+      round1 : "First round Tango Hobby",
+      round2 : "Second round  TangoHobby"
+    });
+  answers.tango.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Blues
+  answers.blues = new  HobbyAnswer ({
+      round1 : "First round blues Hobby",
+      round2 : "Second round  blues Hobby"
+    });
+  answers.blues.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Jazz
+  answers.jazz = new  HobbyAnswer ({
+      round1 : "First round Jazz Hobby",
+      round2 : "Second round  Jazz Hobby"
+    });
+  answers.jazz.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Drumming
+  answers.drumming = new  HobbyAnswer ({
+      round1 : "First round Drumming Hobby",
+      round2 : "Second round  Drumming Hobby"
+    });
+  answers.drumming.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Guitar
+  answers.guitar = new  HobbyAnswer ({
+      round1 : "First round Guitar Hobby",
+      round2 : "Second round  Guitar Hobby"
+    });
+  answers.guitar.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Harmonica
+  answers.harmonica = new  HobbyAnswer ({
+      round1 : "First round Harmonica Hobby",
+      round2 : "Second round  Harmonica Hobby"
+    });
+  answers.harmonica.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+  // Piano_/_Keyboard
+  answers.piano = new  HobbyAnswer ({
+      round1 : "First round Piano Hobby",
+      round2 : "Second round  Piano Hobby"
+    });
+  answers.piano.save(function(err, answer) {
+      if (err) return console.log(err);
+      console.log("Hobby answer was saved!", answer);
+    });
+
 
   return seedCategories(seedHobbies);
 })();
@@ -899,12 +1480,6 @@ function seedHobbies(categories) {
       if (err) return console.log(err);
       console.log("Hobby was saved!", hobby);
   });
-
-
-
-
-
-  // Piano_/_Keyboard
 
   var bluesHobby  = new Hobby ({
       name           : "Blues",

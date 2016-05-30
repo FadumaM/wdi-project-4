@@ -50406,6 +50406,8 @@ angular
       });
     }
 
+
+
 angular
     .module('Hobbyist')
     .controller('UsersController', UsersController);
@@ -50485,6 +50487,8 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
 
   return self;
 }
+
+
 
 angular
   .module('Hobbyist')

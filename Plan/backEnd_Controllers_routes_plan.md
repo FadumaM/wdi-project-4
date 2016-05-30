@@ -25,8 +25,6 @@ function hobbiesSave(req, res) {
 
 ### Hobby Controller/routes
 
-- Hobby Create
-  - /hobbies
 - Hobby index
   - /hobbies
   - populate the hobbies answers
@@ -42,6 +40,4 @@ function hobbiesSave(req, res) {
 - category show
   - categories/:id
 - category index
-  - /categories
-- category create
   - /categories
