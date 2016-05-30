@@ -23,4 +23,6 @@ router.route('/users/:id')
 router.route('/users/:userId/hobbies/:id/save')
   .get(usersController.hobbySave);
 
+router.route('/auth/facebook').post(authenticationsController.facebook);
+
 module.exports = router;

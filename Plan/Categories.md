@@ -7,7 +7,7 @@ Categories
     Painting_and_Drawing
     Sewing
     Kite_Flying_/_Making
-  ]
+  ].done
 
 
   Sports = [
@@ -17,7 +17,7 @@ Categories
     Swimming
     Fishing
     Rock_Climbing
-  ]
+  ].done
 
   Exercise = [
     Skydiving
@@ -26,7 +26,7 @@ Categories
     Pilates/Yoga
     Hiking
     Kayak_and_Canoe
-  ]
+  ].done
 
   MartialArts = [
     Tai_Chi
@@ -35,7 +35,7 @@ Categories
     Kung_Fu
     Taekwondo
     Boxing
-  ]
+  ].done
 
 
   Geek = [

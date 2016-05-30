@@ -2,7 +2,7 @@
 
 ### The feel of the website
 
-Im going for a modern hipster feel , with warm autumanl colors.
+Im going for a modern hipster feel , with warm autumnal colours.
 
 ###Color scheme
 

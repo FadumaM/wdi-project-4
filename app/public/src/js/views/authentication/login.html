@@ -1,5 +1,7 @@
 <section>
   <h2>Login</h2>
+  <button ng-click="user.authenticate('facebook')">Sign in with Facebook</button>
+
   <form id="login" name="user.loginForm" ng-submit="user.login()" novalidate>
     <div class="alert alert-danger" role="alert" ng-show="(!!user.error && user.loginForm.$submitted)">{{ user.error }}</div>
 

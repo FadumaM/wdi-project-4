@@ -2,9 +2,9 @@ angular
     .module('Hobbyist')
     .controller('UsersController', UsersController);
 
-UsersController.$inject = ['User', 'CurrentUser', "$state", "$stateParams"];
+UsersController.$inject = ['User', 'CurrentUser', "$state", "$stateParams",'$auth'];
 
-function UsersController(User, CurrentUser, $state, $stateParams) {
+function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
 
     var self = this;
 
@@ -14,15 +14,16 @@ function UsersController(User, CurrentUser, $state, $stateParams) {
       });
     }
 
-    self.all = [];
-    self.user = null;
-    self.currentUser = null;
-    self.error = null;
-    self.getUsers = getUsers;
-    self.register = register;
-    self.login = login;
-    self.logout = logout;
+    self.all           = [];
+    self.user          = null;
+    self.currentUser   = null;
+    self.error         = null;
+    self.getUsers      = getUsers;
+    self.register      = register;
+    self.login         = login;
+    self.logout        = logout;
     self.checkLoggedIn = checkLoggedIn;
+    self.authenticate  = authenticate;
 
     function getUsers() {
         User.query(function(data) {
@@ -66,6 +67,12 @@ function UsersController(User, CurrentUser, $state, $stateParams) {
 
     if (checkLoggedIn()) {
       self.getUsers();
+    }
+
+    function authenticate(provider) {
+      $auth.authenticate(provider);
+      $state.go('home');
+
     }
 
   return self;

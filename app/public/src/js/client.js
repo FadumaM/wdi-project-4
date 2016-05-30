@@ -1,7 +1,9 @@
 angular
-  .module('Hobbyist', ['angular-jwt', 'ngResource', 'ui.router'])
-  .constant('API', 'http://localhost:3000/api')
+  .module('Hobbyist', ['angular-jwt', 'ngResource', 'satellizer','ui.router'])
+  .constant('API_URL', 'http://localhost:3000/api')
+  .constant('facebookClientId', '1812062232347280')
   .config(MainRouter)
+  .config(oauthConfig)
   .config(function($httpProvider) {
     $httpProvider.interceptors.push('authInterceptor');
   });
@@ -30,3 +32,11 @@ angular
 
     $urlRouterProvider.otherwise("/");
   }
+
+    oauthConfig.$inject = ['API_URL', '$authProvider', 'facebookClientId'];
+    function oauthConfig(API_URL, $authProvider, facebookClientId) {
+      $authProvider.facebook({
+        url: API_URL + '/auth/facebook',
+        clientId: facebookClientId // replace with your facebook client id
+      });
+    }

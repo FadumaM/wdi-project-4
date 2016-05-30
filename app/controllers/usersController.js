@@ -8,7 +8,7 @@ function usersIndex(req, res) {
 }
 
 function usersShow(req, res) {
-  User.findById(req.params.id, function(err, user){
+  User.findById(req.params.id).populate("hobbies").exec(function(err, user){
     if (err) return res.status(404).json({ message: 'Something went wrong.' });
     res.status(200).json(user);
   });
@@ -32,7 +32,7 @@ function usersHobbiesSave(req, res) {
     new: true
   }).populate("hobbies").exec(function(err, trainer){
     if (err) return res.status(500).json(err);
-    res.status(201).json({ user: user });
+    res.status(201).json( user );
   });
 }
 

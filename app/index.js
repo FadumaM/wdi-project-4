@@ -5,6 +5,7 @@ var bodyParser      = require("body-parser");
 var mongoose        = require("mongoose");
 var passport        = require("passport");
 var expressJWT      = require("express-jwt");
+var qs              = require('qs');
 var config          = require("./config/config");
 var app             = express();
 
