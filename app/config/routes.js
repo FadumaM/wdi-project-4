@@ -18,7 +18,7 @@ router.route('/auth/facebook').post(authenticationsController.facebook);
 
 router.route('/users')
   .get(usersController.index);
-  
+
 router.route('/users/:id')
   .get(usersController.show)
   .put(usersController.update);
@@ -30,7 +30,7 @@ router.route('/users/:userId/hobbies/:id/save')
 router.route('/hobby')
   .get(hobbysController.index);
 
-router.route('/hobby/:category')
+router.route('/hobby/:id')
   .get(hobbysController.show);
 
 
