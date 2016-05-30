@@ -12,7 +12,7 @@ angular
     self.removeToken = removeToken;
     self.decodeToken = decodeToken;
 
-    function setToken(){
+    function setToken(token){
       return $window.localStorage.setItem('auth-token', token);
     }
 
@@ -27,8 +27,8 @@ angular
 
     function decodeToken(){
       var token = self.getToken();
-      if (token) {
-      var decodedUser = jwtHelper.decodeToken(token);
+      if (token && token !== "null") {
+        var decodedUser = jwtHelper.decodeToken(token);
       return token ? decodedUser._doc : null;
       }
     }

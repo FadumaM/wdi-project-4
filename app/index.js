@@ -41,6 +41,10 @@ app.use(function (err, req, res, next) {
   next();
 });
 
+//****** Routing *******//
+var routes = require("./config/routes");
+app.use("/api", routes);
+
 //******** Front End ********* //
 app.use("/", express.static(__dirname + "/public"));
 app.use("/", express.static(__dirname + "/bower_components"));
@@ -49,9 +53,6 @@ app.get("/*", function(req, res){
  res.sendFile(__dirname + "/public/index.html");
 });
 
-//****** Routing *******//
-var routes = require("./config/routes");
-app.use("/api", routes);
 app.listen(config.port, function(){
   console.log("hello hobbyist!!!!!!" + config.port);
 });

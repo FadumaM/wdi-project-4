@@ -44,6 +44,7 @@ function UsersController(User, CurrentUser, $state, $stateParams) {
     }
 
     function register() {
+      console.log(self.user);
         User.register(self.user, handleLogin, handleError);
     }
 
