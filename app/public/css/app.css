@@ -7961,3 +7961,17 @@ main {
 .row.quiz.header {
   text-align: center;
 }
+
+.container.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container.home .row.home.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

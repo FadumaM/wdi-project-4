@@ -4,8 +4,8 @@
   </div>
 </div>
 <div class="row quiz question four">
-  <div class="col-xs-6 col-md-3" ng-repeat=" hobby in quiz.firstThreeHobbies" ng-click="quiz.saveFirstShownHobby(hobby)">
-      <p>This is a card</p>
+  <div class="col-xs-6 col-md-3" ng-repeat=" hobby in quiz.firstThreeHobbies" ng-click="quiz.saveHobby(hobby)">
+      <p>{{category.categoryAnswer.round1}}</p>
   </div>
   <div class="col-xs-10 col-md-10">
     <button type="button" name="button" class="btn btn-default" ui-sref="hobbySecondQuestion">Next question</button>

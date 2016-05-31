@@ -1,0 +1,12 @@
+module.exports = [
+  { "name": "artistic" },
+  { "name": "sports" },
+  { "name": "exercise" },
+  { "name": "martialArts" },
+  { "name": "geek" },
+  { "name": "foodAndDrink" },
+  { "name": "languages" },
+  { "name": "performance" },
+  { "name": "dancing" },
+  { "name": "music" }
+]

@@ -4,6 +4,7 @@ var methodOverride  = require("method-override");
 var bodyParser      = require("body-parser");
 var mongoose        = require("mongoose");
 var passport        = require("passport");
+var cors            = require('cors');
 var expressJWT      = require("express-jwt");
 var qs              = require('qs');
 var config          = require("./config/config");
@@ -25,6 +26,7 @@ app.use(methodOverride(function(req, res){
   }
 }));
 app.use(passport.initialize());
+app.use(cors());
 
 app.use('/api', expressJWT({ secret: config.secret })
 .unless({

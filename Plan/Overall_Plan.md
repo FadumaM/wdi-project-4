@@ -84,7 +84,7 @@ button "find a new hobby" - register - normal register
 
 ###Meet Up
 - make a get request to https://api.meetup.com/2/groups.
-- sending object
+- sending params
 - the keys are the following
   - topic : "the hobby name"
   - lat: "51.5074" //London lat

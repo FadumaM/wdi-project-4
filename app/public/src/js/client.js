@@ -1,6 +1,10 @@
 angular
   .module('Hobbyist', ['angular-jwt', 'ngResource', 'satellizer','ui.router'])
   .constant('API_URL', 'http://localhost:3000/api')
+  .constant('MEETUP_URL', 'https://api.meetup.com/2/groups')
+  .constant('EVENTFUL', 'http://api.eventful.com/json/events/search')
+  // .constant('MEETUP_API_KEY', process.env.MEETUP_API_KEY)
+  .constant('EVENTFUL_API_KEY', 'cdH9zPzX2NJ3Jk7N')
   .constant('facebookClientId', '1812062232347280')
   .config(MainRouter)
   .config(oauthConfig)
@@ -76,6 +80,12 @@ angular
         templateUrl: "/src/js/views/quiz/hobby/show.html",
         controller: "QuizController",
         controllerAs: "quiz"
+      })
+      .state('eventIndex',{
+        url: '/events',
+        templateUrl: "/src/js/views/events/index.html",
+        controller: "EventsController",
+        controllerAs: "event"
       });
 
     $urlRouterProvider.otherwise("/");

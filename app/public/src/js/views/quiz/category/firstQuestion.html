@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="row quiz question one">
-  <div class="col-xs-6 col-md-3" ng-repeat=" category in quiz.firstFiveCategories" ng-click="quiz.saveFirstShownCategory(category)">
+  <div class="col-xs-6 col-md-3" ng-repeat=" category in quiz.firstFiveCategories" ng-click="quiz.saveCategory(category)">
       <p>{{category.categoryAnswer.round1}}</p>
   </div>
   <div class="col-xs-10 col-md-10">

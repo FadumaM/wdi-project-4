@@ -13,10 +13,8 @@ angular
         return config;
       },
       response: function(res){
-        console.log(res);
 
       if (res.config.url.indexOf(API_URL) === 0 && res.data.token) {
-        console.log("***Interceptor***", res.data.token);
         TokenService.setToken(res.data.token);
         }
         return res;

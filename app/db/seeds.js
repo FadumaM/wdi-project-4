@@ -14,6 +14,11 @@ Hobby.remove();
 
 mongoose.connect(config.database);
 
+
+
+
+
+
 Promise.try(seedAnswers).then(function(answers) {
   console.log("seeding categories");
   var categories = seedCategories(answers);
@@ -785,123 +790,172 @@ function seedAnswers() {
   return answers;
 }
 
-function seedCategories(answers) {
-  var categories = {};
+// function seedCategories(answers) {
+//   var categories = {};
+//
+//   var artistic = new Category ({
+//     name : "artistic",
+//     categoryAnswer: answers.artisticAnswer
+//   });
+//
+//   artistic.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+// 
+//   var sports = new Category ({
+//     name : "sports",
+//     categoryAnswer: answers.sportsAnswer
+//   });
+//
+//   sports.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var exercise = new Category ({
+//     name : "exercise",
+//     categoryAnswer: answers.exerciseAnswer
+//   });
+//
+//   exercise.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var martialArts = new Category ({
+//     name : "martialArts",
+//     categoryAnswer: answers.martialArtsAnswer
+//   });
+//
+//   martialArts.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var geek = new Category ({
+//     name : "geek",
+//     categoryAnswer: answers.geekAnswer
+//   });
+//
+//   geek.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var foodAndDrink = new Category ({
+//     name : "foodAndDrink",
+//     categoryAnswer: answers.foodAndDrinkAnswer
+//   });
+//
+//   foodAndDrink.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var languages = new Category ({
+//     name : "languages",
+//     categoryAnswer: answers.languagesAnswer
+//   });
+//
+//   languages.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var performance = new Category ({
+//     name : "performance",
+//     categoryAnswer: answers.performanceAnswer
+//   });
+//
+//   performance.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var dancing = new Category ({
+//     name : "dancing",
+//     categoryAnswer: answers.dancingAnswer
+//   });
+//   dancing.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   var music = new Category ({
+//     name : "music",
+//     categoryAnswer: answers.musicAnswer
+//   });
+//
+//   music.save(function(err, category) {
+//     categories[category] = category;
+//     if (err) return console.log(err);
+//     console.log("Category was saved!", category);
+//   });
+//
+//   return categories;
+// }
 
-  var artistic = new Category ({
-    name : "artistic",
-    categoryAnswer: answers.artisticAnswer
-  });
 
-  artistic.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var sports = new Category ({
-    name : "sports",
-    categoryAnswer: answers.sportsAnswer
-  });
 
-  sports.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var exercise = new Category ({
-    name : "exercise",
-    categoryAnswer: answers.exerciseAnswer
-  });
 
-  exercise.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var martialArts = new Category ({
-    name : "martialArts",
-    categoryAnswer: answers.martialArtsAnswer
-  });
 
-  martialArts.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var geek = new Category ({
-    name : "geek",
-    categoryAnswer: answers.geekAnswer
-  });
 
-  geek.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var foodAndDrink = new Category ({
-    name : "foodAndDrink",
-    categoryAnswer: answers.foodAndDrinkAnswer
-  });
 
-  foodAndDrink.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var languages = new Category ({
-    name : "languages",
-    categoryAnswer: answers.languagesAnswer
-  });
 
-  languages.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var performance = new Category ({
-    name : "performance",
-    categoryAnswer: answers.performanceAnswer
-  });
 
-  performance.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var dancing = new Category ({
-    name : "dancing",
-    categoryAnswer: answers.dancingAnswer
-  });
-  dancing.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  var music = new Category ({
-    name : "music",
-    categoryAnswer: answers.musicAnswer
-  });
 
-  music.save(function(err, category) {
-    categories[category] = category;
-    if (err) return console.log(err);
-    console.log("Category was saved!", category);
-  });
 
-  return categories;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function seedHobbies(categories) {
-  
+
   var ceramics_PotteryHobby = new Hobby ({
     name           : "Ceramic & Pottery",
     description    : "Ceramics & Pottery can be one of the most creative and fun arts. Although it may seem more intimidating to get into, once you learn the basics and get some materials it is very easy to continue and learn. Practically anything can be made in ceramics, from sculptures of people and animals, to objects such as model houses, cars, furniture. The trick to have fun while you make it and not be afraid to make mistakes and try new objects.",
