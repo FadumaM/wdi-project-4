@@ -3,7 +3,7 @@ angular
   .factory('Hobby', Hobby);
 
 Hobby.$inject = ['$resource', 'API_URL'];
-function User($resource, API_URL){
+function Hobby($resource, API_URL){
 
   return $resource(
     API_URL+'/hobbys/:id', {id: '@id'},

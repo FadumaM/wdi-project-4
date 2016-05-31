@@ -3,7 +3,7 @@ angular
   .factory('Category', Category);
 
 Category.$inject = ['$resource', 'API_URL'];
-function User($resource, API_URL){
+function Category($resource, API_URL){
 
   return $resource(
     API_URL+'/category/:id', {id: '@id'},

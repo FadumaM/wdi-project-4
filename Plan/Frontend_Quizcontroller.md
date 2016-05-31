@@ -18,6 +18,6 @@
    - Display each 3 hobbyAnswer.round1 on the first and second question
    - When the user click on the hobby push the hobby into Saved hobby array
    - The third question will display the the saved hobbies.
-   - the shown hobby is then saved as Shownhobby.
-   - Show the shown hobby on the show hobbypage
+   - the shown hobby is then saved as Shown hobby.
+   - Show the shown hobby on the show hobby page
    - Will need to send the shown hobby to the event controller - how do i do this?

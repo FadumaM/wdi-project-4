@@ -1,1 +1,13 @@
-<h1>Category Third Question</h1>
+<div class="row quiz header three">
+  <div class="col-xs-10 col-md-10">
+      <h1>Category Third Question</h1>
+  </div>
+</div>
+<div class="row quiz question three">
+  <div class="col-xs-6 col-md-3" ng-repeat="quiz.savedCategory" ng-click="quiz.saveFinalShownCategory(category)">
+      <p>This is a card</p>
+  </div>
+  <div class="col-xs-10 col-md-10">
+    <button type="button" name="button" class="btn btn-default" ui-sref="hobbyFirstQuestion">Next question</button>
+  </div>
+</div>

@@ -50396,35 +50396,51 @@ angular
       })
       .state('quizHome',{
         url: '/quiz/home',
-        templateUrl: "/src/js/views/quiz/home.html"
+        templateUrl: "/src/js/views/quiz/home.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('categoryFirstQuestion',{
         url: '/quiz/1',
-        templateUrl: "/src/js/views/quiz/category/firstQuestion.html"
+        templateUrl: "/src/js/views/quiz/category/firstQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('categorySecondQuestion',{
         url: '/quiz/2',
-        templateUrl: "/src/js/views/quiz/category/secondQuestion.html"
+        templateUrl: "/src/js/views/quiz/category/secondQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('categoryThirdQuestion',{
         url: '/quiz/3',
-        templateUrl: "/src/js/views/quiz/category/thirdQuestion.html"
+        templateUrl: "/src/js/views/quiz/category/thirdQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('hobbyFirstQuestion',{
         url: '/quiz/4',
-        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html"
+        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
-      .state('hobbSecondQuestion',{
+      .state('hobbySecondQuestion',{
         url: '/quiz/5',
-        templateUrl: "/src/js/views/quiz/hobby/secondQuestion.html"
+        templateUrl: "/src/js/views/quiz/hobby/secondQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
-      .state('hobbThirdQuestion',{
+      .state('hobbyThirdQuestion',{
         url: '/quiz/6',
-        templateUrl: "/src/js/views/quiz/hobby/thirdQuestion.html"
+        templateUrl: "/src/js/views/quiz/hobby/thirdQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('showHobby',{
         url: '/hobby/show',
-        templateUrl: "/src/js/views/quiz/hobby/show.html"
+        templateUrl: "/src/js/views/quiz/hobby/show.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       });
 
     $urlRouterProvider.otherwise("/");
@@ -50443,10 +50459,93 @@ angular
     .module('Hobbyist')
     .controller('QuizController', QuizController);
 
-    QuizController.$inject = ['Hobby', 'Category'];
+    QuizController.$inject = ['Hobby', 'Category', 'User'];
 
-    function QuizController(Hobby, Category) {
+    function QuizController(Hobby, Category, User) {
+      self                              = this;
 
+      self.getCategory                  = getCategory;
+      self.saveCategories               = saveCategories;
+      self.saveFirstShownCategory       = saveFirstShownCategory;
+      self.saveSecondShownCategory      = saveSecondShownCategory;
+      self.saveFinalShownCategory       = saveSecondShownCategory;
+      self.firstFiveCategories          = [];
+      self.secondFiveCategories         = [];
+      self.savedCategory                = [];
+      self.firstQuestionCategory        = null;
+      self.secondQuestionCategory       = null;
+      self.shownCategory                = null;
+
+      self.getHobby                     = getHobby;
+      self.saveHobby                    = saveHobby;
+      self.saveFirstShownHobby          = saveFirstShownHobby;
+      self.saveSecondShownHobby         = saveSecondShownHobby;
+      self.saveFinalShownHobby          = saveSecondShownHobby;
+      self.filteredHobbies              = null;
+      self.firstThreeHobbies            = [];
+      self.secondThreeHobbies           = [];
+      self.savedHobbies                 = [];
+      self.firstQuestionHobby           = null;
+      self.secondQuestionHobby          = null;
+      self.shownHobby                   = null;
+
+      self.saveHobbyToUser              = saveHobbyToUser;
+
+      function getCategory() {
+        Category.Query(function(response) {
+          self.firstFiveCategories.push(response);
+          self.secondFiveCategories = self.firstFiveCategories.splice(5,5);
+          return [self.firstFiveCategories, self.secondFiveCategories];
+        });
+      }
+
+      function saveFirstShownCategory(category) {
+        self.firstQuestionCategory = category;
+      }
+      function saveSecondShownCategory(category) {
+        self.secondQuestionCategory = category;
+      }
+      function saveFinalShownCategory(category) {
+        self.shownCategory = category;
+
+      }
+
+      function pushCategories() {
+        self.savedCategory.push(self.firstQuestionCategory, self.secondQuestionCategory);
+      }
+
+
+      function getHobby() {
+        Hobby.Query(function(response) {
+          if(response.category._id === shownCategory._id);{
+            //then push those hobbies into the the filterdhobbies array
+            self.filteredHobbies = result;
+            self.firstThreeHobbies.push(self.filteredHobbies);
+            self.secondThreeHobbies = self.firstThreeHobbies.splice(3,3);
+          }
+        });
+      }
+
+      function saveFirstShownHobby(hobby) {
+        self.firstQuestionHobby = hobby;
+      }
+      function saveSecondShownHobby(hobby) {
+        self.secondQuestionHobby = hobby;
+      }
+      function saveFinalShownHobby(hobby) {
+        self.shownHobby = hobby;
+
+      }
+
+      function saveHobby () {
+        self.savedHobbies.push(self.firstQuestionHobby, self.secondQuestionHobby);
+      }
+
+      function saveHobbyToUser() {
+        User.saveHobby({});
+        //self.currentUser._id = userID
+        //self.shownHobby._id  = id
+      }
 
     }
 
@@ -50487,7 +50586,7 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
         var token = res.token ? res.token : null;
         if (token) {
             self.getUsers();
-            $state.go('home');
+            $state.go('quizHome');
         }
         self.currentUser = CurrentUser.getUser();
     }
@@ -50535,7 +50634,7 @@ angular
   .factory('Category', Category);
 
 Category.$inject = ['$resource', 'API_URL'];
-function User($resource, API_URL){
+function Category($resource, API_URL){
 
   return $resource(
     API_URL+'/category/:id', {id: '@id'},
@@ -50553,7 +50652,7 @@ angular
   .factory('Hobby', Hobby);
 
 Hobby.$inject = ['$resource', 'API_URL'];
-function User($resource, API_URL){
+function Hobby($resource, API_URL){
 
   return $resource(
     API_URL+'/hobbys/:id', {id: '@id'},
@@ -50587,6 +50686,10 @@ function User($resource, API_URL){
       'login':      {
                     url: API_URL + '/login',
                     method: "POST"
+                  },
+      'saveHobby':{
+                    url: API_URL + '/users/:userId/hobbies/:id/save',//{userId: @userId},{id: @id},
+                    method : 'GET'
                   }
     }
   );

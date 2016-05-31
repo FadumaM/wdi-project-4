@@ -3,3 +3,18 @@
 body{
   background-color : #B5C9D4;
 }
+main{
+  width: 100vw;
+  height: 100vh;
+}
+
+.row.quiz.question{
+  .col-xs-6.col-md-3{
+    border: 2px solid black;
+    text-align: center;
+  }
+}
+
+.row.quiz.header{
+  text-align: center;
+}

@@ -35,7 +35,7 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
         var token = res.token ? res.token : null;
         if (token) {
             self.getUsers();
-            $state.go('home');
+            $state.go('quizHome');
         }
         self.currentUser = CurrentUser.getUser();
     }

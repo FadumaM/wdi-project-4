@@ -19,6 +19,10 @@ function User($resource, API_URL){
       'login':      {
                     url: API_URL + '/login',
                     method: "POST"
+                  },
+      'saveHobby':{
+                    url: API_URL + '/users/:userId/hobbies/:id/save',//{userId: @userId},{id: @id},
+                    method : 'GET'
                   }
     }
   );

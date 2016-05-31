@@ -31,35 +31,51 @@ angular
       })
       .state('quizHome',{
         url: '/quiz/home',
-        templateUrl: "/src/js/views/quiz/home.html"
+        templateUrl: "/src/js/views/quiz/home.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('categoryFirstQuestion',{
         url: '/quiz/1',
-        templateUrl: "/src/js/views/quiz/category/firstQuestion.html"
+        templateUrl: "/src/js/views/quiz/category/firstQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('categorySecondQuestion',{
         url: '/quiz/2',
-        templateUrl: "/src/js/views/quiz/category/secondQuestion.html"
+        templateUrl: "/src/js/views/quiz/category/secondQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('categoryThirdQuestion',{
         url: '/quiz/3',
-        templateUrl: "/src/js/views/quiz/category/thirdQuestion.html"
+        templateUrl: "/src/js/views/quiz/category/thirdQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('hobbyFirstQuestion',{
         url: '/quiz/4',
-        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html"
+        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
-      .state('hobbSecondQuestion',{
+      .state('hobbySecondQuestion',{
         url: '/quiz/5',
-        templateUrl: "/src/js/views/quiz/hobby/secondQuestion.html"
+        templateUrl: "/src/js/views/quiz/hobby/secondQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
-      .state('hobbThirdQuestion',{
+      .state('hobbyThirdQuestion',{
         url: '/quiz/6',
-        templateUrl: "/src/js/views/quiz/hobby/thirdQuestion.html"
+        templateUrl: "/src/js/views/quiz/hobby/thirdQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('showHobby',{
         url: '/hobby/show',
-        templateUrl: "/src/js/views/quiz/hobby/show.html"
+        templateUrl: "/src/js/views/quiz/hobby/show.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       });
 
     $urlRouterProvider.otherwise("/");
