@@ -6,8 +6,10 @@ var router   = express.Router();
 
 var usersController             = require("../controllers/usersController");
 var authenticationsController   = require("../controllers/authenticationsController");
+var statementController         = require("../controllers/statementController");
 var categoryController          = require("../controllers/categoryController");
 var hobbysController            = require("../controllers/hobbysController");
+var eventsController            = require("../controllers/eventsController");
 
 
 //******* Routes ***********//
@@ -23,8 +25,8 @@ router.route('/users/:id')
   .get(usersController.show)
   .put(usersController.update);
 
-router.route('/users/:userId/hobbies/:id/save')
-  .get(usersController.hobbySave);
+router.route('/users/hobby/save')
+  .post(usersController.hobbySave);
 
 
 router.route('/hobby')
@@ -34,11 +36,16 @@ router.route('/hobby/:id')
   .get(hobbysController.show);
 
 
+router.route('/statement')
+    .get(statementController.index);
+
 router.route('/category')
     .get(categoryController.index);
 
-router.route('/category/:id')
-    .get(categoryController.show);
+router.route('/events/meetup')
+  .post(eventsController.meetup);
+
+// router.route('/events/eventful');
 
 
 module.exports = router;

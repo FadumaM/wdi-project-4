@@ -23,14 +23,16 @@ function usersUpdate(req, res){
 }
 
 function usersHobbiesSave(req, res) {
-  var userId = req.params.userId;
-  var hobbiesId = req.params.id;
+  console.log(req.body);
+  var userId = req.body.user._id;
+  var hobbyId = req.body.hobby._id;
   User.findByIdAndUpdate({ _id: userId }, {
-    $addToSet: { hobbies: hobbiesId }
+    $addToSet: { hobbies: hobbyId }
   },
   {
     new: true
-  }).populate("hobbies").exec(function(err, trainer){
+  }).populate("hobbies").exec(function(err, user){
+    console.log(user);
     if (err) return res.status(500).json(err);
     res.status(201).json( user );
   });

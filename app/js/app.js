@@ -50366,6 +50366,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
 angular
   .module('Hobbyist', ['angular-jwt', 'ngResource', 'satellizer','ui.router'])
   .constant('API_URL', 'http://localhost:3000/api')
+  .constant('EVENTFUL_API_KEY', 'cdH9zPzX2NJ3Jk7N')
   .constant('facebookClientId', '1812062232347280')
   .config(MainRouter)
   .config(oauthConfig)
@@ -50397,27 +50398,53 @@ angular
       .state('quizHome',{
         url: '/quiz/home',
         templateUrl: "/src/js/views/quiz/home.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('categoryFirstQuestion',{
-        url: '/quiz',
+        url: '/quiz/1',
         templateUrl: "/src/js/views/quiz/category/firstQuestion.html",
-        controller: "CategoryController",
+        controller: "QuizController",
+        controllerAs: "quiz"
+      })
+      .state('categorySecondQuestion',{
+        url: '/quiz/2',
+        templateUrl: "/src/js/views/quiz/category/secondQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
+      })
+      .state('categoryThirdQuestion',{
+        url: '/quiz/3',
+        templateUrl: "/src/js/views/quiz/category/thirdQuestion.html",
+        controller: "QuizController",
         controllerAs: "quiz"
       })
       .state('hobbyFirstQuestion',{
-        url: '/quiz/:id',
+        url: '/quiz/4',
         templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html",
-        controller: "HobbyController",
+        controller: "QuizController",
+        controllerAs: "quiz"
+      })
+      .state('hobbySecondQuestion',{
+        url: '/quiz/5',
+        templateUrl: "/src/js/views/quiz/hobby/secondQuestion.html",
+        controller: "QuizController",
+        controllerAs: "quiz"
+      })
+      .state('hobbyThirdQuestion',{
+        url: '/quiz/6',
+        templateUrl: "/src/js/views/quiz/hobby/thirdQuestion.html",
+        controller: "QuizController",
         controllerAs: "quiz"
       })
       .state('showHobby',{
-        url: '/hobby/:id',
+        url: '/hobby/show',
         templateUrl: "/src/js/views/quiz/hobby/show.html",
-        controller: "ShowHobbyController",
-        controllerAs: "hobby"
+        controller: "QuizController",
+        controllerAs: "quiz"
       })
       .state('eventIndex',{
-        url: '/events/:id',
+        url: '/events',
         templateUrl: "/src/js/views/events/index.html",
         controller: "EventsController",
         controllerAs: "event"
@@ -50434,137 +50461,137 @@ angular
       });
     }
 
+// angular
+//     .module('Hobbyist')
+//     .controller('EventsController', EventsController);
+//
+//     EventsController.$inject= ['$http', 'MEETUP_URL', 'API_KEY','EVENTBRITE'];
+//     function EventsController ($http, MEETUP_URL, API_KEY, EVENTBRITE) {
+//
+//       self                 = this;
+//       self.getMeetUpEvents = getMeetUpEvents;
+//
+//         function getMeetUpEvents() {
+//           $http
+//           .get(MEETUP_URL+'?&sign=true&photo-host=public&topic=running&zip=SW17%208SF&city=London&page=20&key='+ API_KEY)
+//           .then(function(response) {
+//              console.log(response.data);
+//           });
+//         }
+//
+//         function getEventFull() {
+//           $http
+//           .get(EVENTFUL + '?&keywords=running&location=london&date=Future')
+//           .then(function (response) {
+//
+//           });
+//         }
+//     getMeetUpEvents();
+//   }
 
 angular
     .module('Hobbyist')
-    .controller('CategoryController', CategoryController);
+    .controller('QuizController', QuizController);
 
-    CategoryController.$inject = ['Hobby', 'Statement', 'Category'];
+    QuizController.$inject = ['Hobby', 'Category', 'User'];
 
 
 
-    function CategoryController(Hobby, Statement, Category) {
+    function QuizController(Hobby, Category, User) {
+
+
       // //Binding this to self
       self                              = this;
 
-      // //Narrow down Category
-
-      self.firstFiveCategories          = [];
-      self.secondFiveCategories         = [];
-      self.saveFirstCategory            = saveFirstCategory;
-      self.saveSecondCategory           = saveSecondCategory;
-      self.saveFinalChosenCategory      = saveFinalChosenCategory;
-      self.firstCategory                = null;
-      self.secondCategory               = null;
-      self.savedCategories              = [];
-      self.chosenCategory               = null;
-
-      // Statement.query(function(response) {
-      // console.log(response);
-      // });
-      //
-      //
-
       Category.query(function(response) {
-        self.firstFiveCategories= response;
-        self.secondFiveCategories = self.firstFiveCategories.splice(0,5);
+        console.log(response);
       });
 
-      function saveFirstCategory(category) {
-          self.firstCategory = category;
-          self.savedCategories.push(self.firstCategory);
-      }
-      function saveSecondCategory(category) {
-          self.secondCategory = category;
-          self.savedCategories.push(self.secondCategory);
+      // //Narrow down Category
+      // self.getCategory                  = getCategory;
+      // self.saveCategories               = saveCategories;
+      // self.saveFinalChosenCategory      = saveFinalChosenCategory;
+      // self.firstFiveCategories          = [];
+      // self.secondFiveCategories         = [];
+      // self.savedCategory                = [];
+      // self.chosenCategory               = null;
+      //
+      // //Narrow down hobby
+      // self.getHobby                     = getHobby;
+      // self.saveHobby                    = saveHobby;
+      // self.saveFinalChosenHobby         = saveFinalChosenHobby;
+      // self.filteredHobbies              = null;
+      // self.firstThreeHobbies            = [];
+      // self.secondThreeHobbies           = [];
+      // self.savedHobbies                 = [];
+      // self.chosenHobby                  = null;
+      //
+      // // save hobby to user
+      // self.saveHobbyToUser              = saveHobbyToUser;
+      //
+      //
+      // function getCategory() {
+      //   Category.Query(function(response) {
+      //     self.firstFiveCategories.push(response);
+      //     self.secondFiveCategories = self.firstFiveCategories.splice(5,5);
+      //     return [self.firstFiveCategories, self.secondFiveCategories];
+      //   });
+      // }
+      //
+      // function savedCategories(category) {
+      //   self.savedCategory.push(category);
+      // }
+      //
+      // function saveFinalChosenCategory(category) {
+      //   self.chosenCategory = category;
+      //
+      // }
+      //
+      //
+      // function getHobby() {
+      //   Hobby.Query(function(response) {
+      //     if(chosenCategory._id === response.category._id);{
+      //       //then push those hobbies into the the filterdhobbies array
+      //       self.filteredHobbies = result;
+      //       self.firstThreeHobbies.push(self.filteredHobbies);
+      //       self.secondThreeHobbies = self.firstThreeHobbies.splice(3,3);
+      //       return [self.firstThreeHobbies , self.secondThreeHobbies ];
+      //     }
+      //   });
+      // }
+      //
+      //
+      // function saveHobby(hobby) {
+      //   self.savedHobbies.push(hobby);
+      // }
+      //
+      //
+      // function saveFinalChosenHobby(hobby) {
+      //   self.chosenHobby = hobby;
+      // }
+      //
+      //
+      // function saveHobbyToUser() {
+      //   User.saveHobby({});
+      //   //self.currentUser._id = userID
+      //   //self.chosenHobby._id  = id
+      //   //reset()
+      // }
+      //
+      // function reset() {
+      //   self.firstFiveCategories          = [];
+      //   self.secondFiveCategories         = [];
+      //   self.savedCategory                = [];
+      //   self.chosenCategory               = null;
+      //
+      //   self.filteredHobbies              = null;
+      //   self.firstThreeHobbies            = [];
+      //   self.secondThreeHobbies           = [];
+      //   self.savedHobbies                 = [];
+      //   self.chosenHobby                  = null;
+      //
+      // }
 
-
-      }
-
-      function saveFinalChosenCategory(category) {
-        self.chosenCategory = category;
-
-      }
-    }
-
-angular
-    .module('Hobbyist')
-    .controller('EventsController', EventsController);
-
-    EventsController.$inject= ['$http', 'API_URL'];
-    function EventsController ($http, API_URL) {
-
-      $http.post();
-
-    }
-
-angular
-    .module('Hobbyist')
-    .controller('HobbyController', HobbyController);
-
-    HobbyController.$inject = ['Hobby', 'Statement', 'Category','$stateParams'];
-
-
-
-    function HobbyController(Hobby, Statement, Category, $stateParams) {
-      // Binding this
-      self      = this;
-      self.firstTwoHobbies       =  [];
-      self.secondTwoHobbies      =  [];
-      self.savedHobbies           =  [];
-      self.saveFirstHobby         = saveFirstHobby;
-      self.saveSecondHobby        = saveSecondHobby;
-      self.saveFinalHobby         = saveFinalHobby ;
-      self.firstHobby             = null;
-      self.secondHobby            = null;
-      self.chosenHobby            = null;
-
-      Hobby.query(function(response) {
-        for (i = 0; i < response.length; i++) {
-            if (response[i].category === $stateParams.id){
-              self.filterHobbies = response[i];
-                self.firstTwoHobbies.push(self.filterHobbies);
-            }
-        }
-        self.secondTwoHobbies = self.firstTwoHobbies.splice(0, 2);
-      });
-
-      function saveFirstHobby(hobby) {
-        self.firstHobby = hobby;
-        self.savedHobbies.push(self.firstHobby);
-        console.log(self.savedHobbies);
-      }
-      function saveSecondHobby(hobby) {
-        self.secondHobby = hobby;
-        self.savedHobbies.push(self.secondHobby);
-        console.log(self.savedHobbies);
-      }
-
-      function saveFinalHobby(hobby) {
-        self.chosenHobby = hobby;
-      }
-    }
-
-angular
-    .module('Hobbyist')
-    .controller('ShowHobbyController', ShowHobbyController);
-
-    ShowHobbyController.$inject = ['User', 'Hobby', '$stateParams', 'CurrentUser'];
-    function ShowHobbyController(User, Hobby, $stateParams, CurrentUser) {
-      self = this;
-      self.currentUser = CurrentUser.getUser();
-      console.log("this is the params",$stateParams);
-      Hobby.get({ id: $stateParams.id}, function(hobby) {
-        self.hobby = hobby;
-      });
-
-      self.saveHobby = function() {
-        console.log(self.currentUser);
-        User.saveHobby({ user: self.currentUser, hobby: self.hobby},
-          function(response) {
-            console.log(response);
-          });
-        };
     }
 
 angular
@@ -50664,7 +50691,6 @@ function Category($resource, API_URL){
   );
 }
 
-
 angular
   .module('Hobbyist')
   .factory('Hobby', Hobby);
@@ -50673,25 +50699,7 @@ Hobby.$inject = ['$resource', 'API_URL'];
 function Hobby($resource, API_URL){
 
   return $resource(
-    API_URL+'/hobby/:id', {id: '@id'},
-    { 'get':       { method: 'GET' },
-      'save':      { method: 'POST' },
-      'query':     { method: 'GET', isArray: true},
-      'remove':    { method: 'DELETE' },
-      'delete':    { method: 'DELETE' },
-    }
-  );
-}
-
-angular
-  .module('Hobbyist')
-  .factory('Statement', Statement);
-
-Statement.$inject = ['$resource', 'API_URL'];
-function Statement($resource, API_URL){
-
-  return $resource(
-    API_URL+'/statement/:id', {id: '@id'},
+    API_URL+'/hobbys/:id', {id: '@id'},
     { 'get':       { method: 'GET' },
       'save':      { method: 'POST' },
       'query':     { method: 'GET', isArray: true},
@@ -50724,8 +50732,8 @@ function User($resource, API_URL){
                     method: "POST"
                   },
       'saveHobby':{
-                    url: API_URL + '/users/hobby/save',
-                    method : 'POST'
+                    url: API_URL + '/users/:userId/hobbies/:id/save',//{userId: @userId},{id: @id},
+                    method : 'GET'
                   }
     }
   );
@@ -50767,7 +50775,6 @@ function CurrentUser(TokenService){
     self.user = getUser();
 
     function getUser() {
-      console.log("gettin user");
         return self.user ? self.user : TokenService.decodeToken();
     }
 
@@ -50805,9 +50812,7 @@ angular
     }
 
     function decodeToken(){
-      console.log("decoding token");
       var token = self.getToken();
-      console.log(token);
       if (token && token !== "null") {
         var decodedUser = jwtHelper.decodeToken(token);
       return token ? decodedUser._doc : null;

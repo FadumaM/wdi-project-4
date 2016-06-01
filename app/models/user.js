@@ -4,16 +4,16 @@ var validator   =   require("validator");
 
 
 var userSchema  = new mongoose.Schema ({
-    facebookId    : {type: String},
-    username      : {type: String,required: true, unique: true},
-    firstName     : {type: String},
-    lastName      : {type: String},
-    image         : {type: String},
-    email         : {type: String, required: true, unique: true },
-    passwordHash  : {type: String },
-    hobbies       : {type: mongoose.Schema.ObjectId, ref: 'Hobby'},
+  facebookId    : {type: String},
+  username      : {type: String,required: true, unique: true},
+  firstName     : {type: String},
+  lastName      : {type: String},
+  image         : {type: String},
+  email         : {type: String, required: true, unique: true },
+  passwordHash  : {type: String },
+  hobbies       : [{type: mongoose.Schema.ObjectId, ref: 'Hobby'}],
   },{
-        timestamps: true
+  timestamps: true
 });
 
 

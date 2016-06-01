@@ -21,8 +21,8 @@ function User($resource, API_URL){
                     method: "POST"
                   },
       'saveHobby':{
-                    url: API_URL + '/users/:userId/hobbies/:id/save',//{userId: @userId},{id: @id},
-                    method : 'GET'
+                    url: API_URL + '/users/hobby/save',
+                    method : 'POST'
                   }
     }
   );

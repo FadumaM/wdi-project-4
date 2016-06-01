@@ -10,6 +10,7 @@ function CurrentUser(TokenService){
     self.user = getUser();
 
     function getUser() {
+      console.log("gettin user");
         return self.user ? self.user : TokenService.decodeToken();
     }
 

@@ -2,7 +2,7 @@ var Hobby   = require("../models/hobby");
 
 
   function HobbyIndex(req, res) {
-    Hobby.find().populate(categories).exec(function(err, users){
+    Hobby.find(function(err, hobby){
       if (err) return res.status(404).json({ message: 'Something went wrong.' });
       res.status(200).json(hobby);
     });
@@ -10,7 +10,8 @@ var Hobby   = require("../models/hobby");
 
 
   function HobbyShow(req, res) {
-    Hobby.findOne(req.params.id).exec(function(err, hobby){
+    console.log(req.params);
+    Hobby.findById(req.params.id).exec(function(err, hobby){
       if (err) return res.status(404).json({ message: 'Something went wrong.' });
       res.status(200).json(hobby);
     });

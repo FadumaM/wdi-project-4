@@ -61,7 +61,7 @@ function register(req, res, next) {
         if (!user) return res.status(401).json(info);
 
         // Choose what data to use as the information to store inside the JWT that will identify this user
-        var payload = user._id;
+        var payload = user;
         // Create a token to send back to the user
         var token = jwt.sign(payload, secret, {
             expiresIn: 60 * 60 * 24
@@ -95,7 +95,7 @@ function login(req, res, next) {
         });
 
         // Choose what data to use as the information to store inside the JWT that will identify this user
-        var payload = user._id;
+        var payload = user;
         // Create a token to send back to the user
         var token = jwt.sign(payload, secret, {
             expiresIn: 60 * 60 * 24

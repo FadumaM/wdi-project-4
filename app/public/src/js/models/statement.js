@@ -1,12 +1,12 @@
 angular
   .module('Hobbyist')
-  .factory('Hobby', Hobby);
+  .factory('Statement', Statement);
 
-Hobby.$inject = ['$resource', 'API_URL'];
-function Hobby($resource, API_URL){
+Statement.$inject = ['$resource', 'API_URL'];
+function Statement($resource, API_URL){
 
   return $resource(
-    API_URL+'/hobby/:id', {id: '@id'},
+    API_URL+'/statement/:id', {id: '@id'},
     { 'get':       { method: 'GET' },
       'save':      { method: 'POST' },
       'query':     { method: 'GET', isArray: true},

@@ -4,10 +4,40 @@
   </div>
 </div>
 <div class="row quiz question four">
-  <div class="col-xs-6 col-md-3" ng-repeat=" hobby in quiz.firstThreeHobbies" ng-click="quiz.saveHobby(hobby)">
-      <p>{{category.categoryAnswer.round1}}</p>
+  <div class="col-xs-6 col-md-3" ng-repeat="hobby in quiz.firstTwoHobbies" ng-click="quiz.saveFirstHobby(hobby)">
+      <p>{{hobby.name}}</p>
   </div>
   <div class="col-xs-10 col-md-10">
     <button type="button" name="button" class="btn btn-default" ui-sref="hobbySecondQuestion">Next question</button>
+  </div>
+</div>
+
+
+<div class="row quiz header four">
+  <div class="col-xs-10 col-md-10">
+    <h1>Hobby Second Question</h1>
+  </div>
+</div>
+<div class="row quiz question four">
+  <div class="col-xs-6 col-md-3" ng-repeat="hobby in quiz.secondTwoHobbies" ng-click="quiz.saveSecondHobby(hobby)">
+      <p>{{hobby.name}}</p>
+  </div>
+  <div class="col-xs-10 col-md-10">
+    <button type="button" name="button" class="btn btn-default" ui-sref="hobbySecondQuestion">Next question</button>
+  </div>
+</div>
+
+
+<div class="row quiz header four">
+  <div class="col-xs-10 col-md-10">
+    <h1>Hobby Third Question</h1>
+  </div>
+</div>
+<div class="row quiz question four">
+  <div class="col-xs-6 col-md-3" ng-repeat="hobby in quiz.savedHobbies" ng-click="quiz.saveFinalHobby(hobby)">
+      <p>{{hobby.name}}</p>
+  </div>
+  <div class="col-xs-10 col-md-10">
+        <button type="button" name="button" class="btn btn-default" ui-sref="showHobby({id: quiz.chosenHobby._id})">{{quiz.chosenHobby.name}}</button>
   </div>
 </div>
