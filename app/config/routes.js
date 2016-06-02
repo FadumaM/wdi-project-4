@@ -42,7 +42,7 @@ router.route('/statement')
 router.route('/category')
     .get(categoryController.index);
 
-router.route('/events/meetup')
+router.route('/events/meetup/:name')
   .post(eventsController.meetup);
 
 // router.route('/events/eventful');

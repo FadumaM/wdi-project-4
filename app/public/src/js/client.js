@@ -54,8 +54,8 @@ angular
       .state('eventIndex',{
         url: '/events/:id',
         templateUrl: "/src/js/views/events/index.html",
-        // controller: "EventsController",
-        // controllerAs: "events"
+        controller: "EventsController",
+        controllerAs: "events"
       });
 
     $urlRouterProvider.otherwise("/");
