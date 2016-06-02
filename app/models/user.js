@@ -5,7 +5,7 @@ var validator   =   require("validator");
 
 var userSchema  = new mongoose.Schema ({
   facebookId    : {type: String},
-  username      : {type: String,required: true, unique: true},
+  username      : {type: String},
   firstName     : {type: String},
   lastName      : {type: String},
   image         : {type: String},

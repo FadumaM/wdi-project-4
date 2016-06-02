@@ -19,14 +19,18 @@ angular
       self.secondHobby            = null;
       self.chosenHobby            = null;
 
+
       Hobby.query(function(response) {
-        for (i = 0; i < response.length; i++) {
-            if (response[i].category === $stateParams.id){
-              self.filterHobbies = response[i];
-                self.firstTwoHobbies.push(self.filterHobbies);
-            }
-        }
-        self.secondTwoHobbies = self.firstTwoHobbies.splice(0, 2);
+        var hobbies = response.filter(function(hobby) {
+          return hobby.category === $stateParams.id;
+        });
+        var hobbyTexts = hobbies.map(function(hobby) {
+          var text = hobby.text;
+          hobby.text = text[Math.floor(Math.random() * text.length)];
+          return hobby;
+        });
+        self.firstTwoHobbies = hobbyTexts;
+        self.secondTwoHobbies = self.firstTwoHobbies.splice(0,2);
       });
 
       function saveFirstHobby(hobby) {

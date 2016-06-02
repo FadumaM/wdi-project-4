@@ -1,17 +1,23 @@
-<div class="container home">
+<div class="row home" ng-show="!user.checkLoggedIn()">
   <div class="row header">
+    <img src="/images/puzzleLogo.png" alt="" />
     <h1>Hobbyist</h1>
     <h2>Welcome</h2>
   </div>
-  <div class="row home content">
-    <p class = "col-xs-6 col-md-6">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div class="row content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
     </p>
   </div>
-  <div class="row home button">
+  <div class="row button">
     <div class="col-md-3 col-md-offset-3">
-      <button class="btn btn-default" name="button" ui-sref="login">Login</button>
+      <button class="btn btn-default" name="button" ui-sref="login">Log in</button>
       <button class="btn btn-default" name="button" ui-sref="register">Register</button>
     </div>
   </div>
+</div>
+
+<div class="row home" ng-show="user.checkLoggedIn()">
+  <h1>This is the Quiz Home</h1>
+  <button type="button" class="btn btn-default" name="button" ui-sref="categoryFirstQuestion">Begin Quiz</button>
 </div>

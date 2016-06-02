@@ -2,38 +2,296 @@
 
 body{
   background-color : #B5C9D4;
+  h1{
+    font-size: 2.827em;
+    font-family: 'Hammersmith One', sans-serif;
+  }
+  h2{
+    font-size: 1.999em;
+    font-family: 'Hammersmith One', sans-serif;
+  }
+  p{
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+  }
 }
 main{
   width: 100vw;
   height: 100vh;
+
+}
+.container{
+  padding: 0px;
+  margin: 0;
+}
+.row {
+    margin-right: 0px;
+    width: 100vw;
+    height: 100vh;
 }
 
-.row.quiz.question{
-  .col-xs-6.col-md-3{
-    border: 2px solid black;
-    width: 115px;
-    height: 100px;
-    text-align: center;
-  }
-}
 
-.row.quiz.header{
-  text-align: center;
-}
 
-.container.home{
+.row.home.ng-scope{
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .row.home.content{
+  .row.header{
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 10px;
+    color: darken(#73777A, 10%);
+    img{
+      margin-top: 10px;
+    }
+  }
+  .row.content{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    margin-bottom: 10px;
+    p{
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  .row.button{
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 10px;
+    .btn.btn-default{
+      margin-right: 5px;
+      background-color: lighten(#FD7E47, 5%);
+      border-color: #FD7E47;
+      color: darken(#ECEDE8, 5%);
+    }
+  }
+}
+.quiz.category.ng-scope{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  h1{
+    font-size: 4em;
+    text-shadow: 0px 4px 6px rgba(150, 150, 150, 1);
+    color: darken(#73777A, 20%);
+  }
+  .question1{
+    .header{
+      text-align: center;
+      // text-transform: uppercase;
+    }
+    .content{
+      margin-top: 20px;
+      .col-xs-6.col-md-6{
+          width: 190px;
+          height: 190px;
+          border: 2px solid black;
+          margin: 10px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          background-color: #FD7E47;
+          border-color: darken(#73777A, 10%);
+          color: #ECEDE8;
+          border-radius: 10px;
+      }
+      .col-xs-6.col-md-6:hover{
+        cursor:pointer;
+        background-color: lighten(#73777A, 10%);
+
+      }
+    }
+  }
+  .question2{
+    .header{
+      text-align: center;
+      // text-transform: uppercase;
+    }
+    .content{
+      margin-top: 20px;
+      .col-xs-6.col-md-6{
+          width: 190px;
+          height: 190px;
+          border: 2px solid black;
+          margin: 10px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          background-color: #FD7E47;
+          border-color: darken(#73777A, 10%);
+          color: #ECEDE8;
+          border-radius: 10px;
+      }
+      .col-xs-6.col-md-6:hover{
+        cursor:pointer;
+        background-color: lighten(#73777A, 10%);
+
+      }
+    }
+
+  }
+  .question3{
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    .header{
+      text-align: center;
+      // text-transform: uppercase;
+    }
+    .content{
+      margin-top: 20px;
+      .col-xs-8.col-md-8{
+          width: 190px;
+          height: 190px;
+          border: 2px solid black;
+          margin: 10px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          background-color: #FD7E47;
+          border-color: darken(#73777A, 10%);
+          color: #ECEDE8;
+          border-radius: 10px;
+      }
+      .col-xs-8.col-md-8:hover{
+        cursor:pointer;
+        background-color: lighten(#73777A, 10%);
+
+      }
+    }
   }
 
 }
+
+.quiz.hobby.ng-scope{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  h1{
+    font-size: 4em;
+    text-shadow: 0px 4px 6px rgba(150, 150, 150, 1);
+    color: darken(#73777A, 20%);
+  }
+  .question1{
+    .header{
+      text-align: center;
+      // text-transform: uppercase;
+    }
+    .content{
+      margin-top: 20px;
+      .col-xs-6.col-md-6{
+          width: 190px;
+          height: 190px;
+          border: 2px solid black;
+          margin: 10px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          background-color: #FD7E47;
+          border-color: darken(#73777A, 10%);
+          color: #ECEDE8;
+          border-radius: 10px;
+      }
+      .col-xs-6.col-md-6:hover{
+        cursor:pointer;
+        background-color: lighten(#73777A, 10%);
+
+      }
+    }
+  }
+  .question2{
+    .header{
+      text-align: center;
+      // text-transform: uppercase;
+    }
+    .content{
+      margin-top: 20px;
+      .col-xs-6.col-md-6{
+          width: 190px;
+          height: 190px;
+          border: 2px solid black;
+          margin: 10px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          background-color: #FD7E47;
+          border-color: darken(#73777A, 10%);
+          color: #ECEDE8;
+          border-radius: 10px;
+      }
+      .col-xs-6.col-md-6:hover{
+        cursor:pointer;
+        background-color: lighten(#73777A, 10%);
+
+      }
+    }
+
+  }
+  .question3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header{
+      text-align: center;
+      // text-transform: uppercase;
+    }
+    .content{
+      margin-top: 20px;
+      .col-xs-8.col-md-8{
+          width: 190px;
+          height: 190px;
+          border: 2px solid black;
+          margin: 10px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          background-color: #FD7E47;
+          border-color: darken(#73777A, 10%);
+          color: #ECEDE8;
+          border-radius: 10px;
+      }
+      .col-xs-8.col-md-8:hover{
+        cursor:pointer;
+        background-color: lighten(#73777A, 10%);
+
+      }
+    }
+  }
+
+}
+
+.row.show{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  .header{
+    font-size: 2em;
+    text-shadow: 0px 4px 6px rgba(150, 150, 150, 1);
+    color: darken(#73777A, 20%);
+  }
+  .content{
+
+  }
+  .button{
+
+  }
+}
+
+
 
 img{
   width: 100px;

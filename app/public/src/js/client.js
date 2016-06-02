@@ -16,7 +16,9 @@ angular
     $stateProvider
       .state('home', {
         url: "/",
-        templateUrl: "/src/js/views/home.html"
+        templateUrl: "/src/js/views/home.html",
+        controller: "UsersController",
+        controllerAs: "user"
       })
       .state('login', {
         url: "/login",
@@ -29,10 +31,6 @@ angular
         templateUrl: "/src/js/views/authentication/register.html",
         controller: "UsersController",
         controllerAs: "user"
-      })
-      .state('quizHome',{
-        url: '/quiz/home',
-        templateUrl: "/src/js/views/quiz/home.html",
       })
       .state('categoryFirstQuestion',{
         url: '/quiz',

@@ -1,6 +1,7 @@
 var passport = require("passport");
 var User = require("../models/user");
 var secret = require("../config/config").secret;
+var config = require("../config/config");
 var jwt = require("jsonwebtoken");
 var rp  = require('request-promise');
 
@@ -10,9 +11,10 @@ var rp  = require('request-promise');
   var params = {
     code: req.body.code,
     client_id: req.body.clientId,
-    client_secret: process.env.FACEBOOK_API_SECRET,
+    client_secret: config.oauth.facebook.secret,
     redirect_uri: config.appUrl + "/"
   };
+  console.log(params);
 
   // step 1, we make a request to facebook for an access token
   rp.get({ url: config.oauth.facebook.accessTokenUrl, qs: params, json: true })

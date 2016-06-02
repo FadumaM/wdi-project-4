@@ -50381,7 +50381,9 @@ angular
     $stateProvider
       .state('home', {
         url: "/",
-        templateUrl: "/src/js/views/home.html"
+        templateUrl: "/src/js/views/home.html",
+        controller: "UsersController",
+        controllerAs: "user"
       })
       .state('login', {
         url: "/login",
@@ -50394,10 +50396,6 @@ angular
         templateUrl: "/src/js/views/authentication/register.html",
         controller: "UsersController",
         controllerAs: "user"
-      })
-      .state('quizHome',{
-        url: '/quiz/home',
-        templateUrl: "/src/js/views/quiz/home.html",
       })
       .state('categoryFirstQuestion',{
         url: '/quiz',
@@ -50460,8 +50458,6 @@ angular
       self.savedCategories              = [];
       self.chosenCategory               = null;
 
-
-
       Category.query(function(response) {
         var categories = response.map(function(category) {
           var text = category.text;
@@ -50472,7 +50468,6 @@ angular
         self.secondFiveCategories = self.firstFiveCategories.splice(0,5);
       });
 
-
       function saveFirstCategory(category) {
           self.firstCategory = category;
           self.savedCategories.push(self.firstCategory);
@@ -50480,8 +50475,6 @@ angular
       function saveSecondCategory(category) {
           self.secondCategory = category;
           self.savedCategories.push(self.secondCategory);
-
-
       }
 
       function saveFinalChosenCategory(category) {
@@ -50541,14 +50534,18 @@ angular
       self.secondHobby            = null;
       self.chosenHobby            = null;
 
+
       Hobby.query(function(response) {
-        for (i = 0; i < response.length; i++) {
-            if (response[i].category === $stateParams.id){
-              self.filterHobbies = response[i];
-                self.firstTwoHobbies.push(self.filterHobbies);
-            }
-        }
-        self.secondTwoHobbies = self.firstTwoHobbies.splice(0, 2);
+        var hobbies = response.filter(function(hobby) {
+          return hobby.category === $stateParams.id;
+        });
+        var hobbyTexts = hobbies.map(function(hobby) {
+          var text = hobby.text;
+          hobby.text = text[Math.floor(Math.random() * text.length)];
+          return hobby;
+        });
+        self.firstTwoHobbies = hobbyTexts;
+        self.secondTwoHobbies = self.firstTwoHobbies.splice(0,2);
       });
 
       function saveFirstHobby(hobby) {
@@ -50626,7 +50623,7 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
         var token = res.token ? res.token : null;
         if (token) {
             self.getUsers();
-            $state.go('quizHome');
+            $state.go('home');
         }
         self.currentUser = CurrentUser.getUser();
     }
@@ -50651,6 +50648,7 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
 
     function checkLoggedIn() {
         self.currentUser = CurrentUser.getUser();
+        console.log(self.currentUser);
         return !!self.currentUser;
     }
 

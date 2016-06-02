@@ -22,8 +22,6 @@ angular
       self.savedCategories              = [];
       self.chosenCategory               = null;
 
-
-
       Category.query(function(response) {
         var categories = response.map(function(category) {
           var text = category.text;
@@ -34,7 +32,6 @@ angular
         self.secondFiveCategories = self.firstFiveCategories.splice(0,5);
       });
 
-
       function saveFirstCategory(category) {
           self.firstCategory = category;
           self.savedCategories.push(self.firstCategory);
@@ -42,8 +39,6 @@ angular
       function saveSecondCategory(category) {
           self.secondCategory = category;
           self.savedCategories.push(self.secondCategory);
-
-
       }
 
       function saveFinalChosenCategory(category) {
