@@ -26,9 +26,7 @@ angular
     }
 
     function decodeToken(){
-      console.log("decoding token");
       var token = self.getToken();
-      console.log(token);
       if (token && token !== "null") {
         var decodedUser = jwtHelper.decodeToken(token);
       return token ? decodedUser._doc : null;

@@ -22,11 +22,11 @@ angular
       self.savedCategories              = [];
       self.chosenCategory               = null;
 
-      // Statement.query(function(response) {
-      // console.log(response);
-      // });
-      //
-      //
+      Statement.query(function(response) {
+      console.log(response);
+      });
+
+
 
       Category.query(function(response) {
         self.firstFiveCategories= response;

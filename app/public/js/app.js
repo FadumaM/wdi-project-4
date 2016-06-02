@@ -50400,13 +50400,13 @@ angular
       })
       .state('categoryFirstQuestion',{
         url: '/quiz',
-        templateUrl: "/src/js/views/quiz/category/firstQuestion.html",
+        templateUrl: "/src/js/views/quiz/category/Questions.html",
         controller: "CategoryController",
         controllerAs: "quiz"
       })
       .state('hobbyFirstQuestion',{
         url: '/quiz/:id',
-        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html",
+        templateUrl: "/src/js/views/quiz/hobby/Questions.html",
         controller: "HobbyController",
         controllerAs: "quiz"
       })
@@ -50459,11 +50459,11 @@ angular
       self.savedCategories              = [];
       self.chosenCategory               = null;
 
-      // Statement.query(function(response) {
-      // console.log(response);
-      // });
-      //
-      //
+      Statement.query(function(response) {
+      console.log(response);
+      });
+
+
 
       Category.query(function(response) {
         self.firstFiveCategories= response;
@@ -50493,7 +50493,6 @@ angular
 
     EventsController.$inject= [ '$http', '$stateParams', 'Hobby'];
     function EventsController( $http, $stateParams, Hobby) {
-      console.log("EVENTS INSTANTIATED!");
       var self = this;
       self.filteredEvents = [];
       self.getEvents = getEvents;
@@ -50507,14 +50506,10 @@ angular
           return $http.post('http://localhost:3000/api/events/meetup/' + hobby);
         })
         .then(function(response) {
-          console.log(response.data);
-          // for(i = 0; i < 20; i++){
-          //   console.log("This is the response data:",response.data.results[i]);
-          //   // self.filteredEvents.push(response.data.results[i]);
-          //   //  console.log("Inside the loop",self.filteredEvents);
-          // }
-          // console.log("Outside the loop",self.filteredEvents);
-
+        self.all = response.data.results;
+          for(i = 0; i <self.all.length ; i++){
+         return self.all[i];
+          }
         });
       }
 
@@ -50790,7 +50785,6 @@ function CurrentUser(TokenService){
     self.user = getUser();
 
     function getUser() {
-      console.log("gettin user");
         return self.user ? self.user : TokenService.decodeToken();
     }
 
@@ -50828,9 +50822,7 @@ angular
     }
 
     function decodeToken(){
-      console.log("decoding token");
       var token = self.getToken();
-      console.log(token);
       if (token && token !== "null") {
         var decodedUser = jwtHelper.decodeToken(token);
       return token ? decodedUser._doc : null;

@@ -35,13 +35,13 @@ angular
       })
       .state('categoryFirstQuestion',{
         url: '/quiz',
-        templateUrl: "/src/js/views/quiz/category/firstQuestion.html",
+        templateUrl: "/src/js/views/quiz/category/Questions.html",
         controller: "CategoryController",
         controllerAs: "quiz"
       })
       .state('hobbyFirstQuestion',{
         url: '/quiz/:id',
-        templateUrl: "/src/js/views/quiz/hobby/firstQuestion.html",
+        templateUrl: "/src/js/views/quiz/hobby/Questions.html",
         controller: "HobbyController",
         controllerAs: "quiz"
       })

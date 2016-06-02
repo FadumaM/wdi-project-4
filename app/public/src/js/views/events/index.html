@@ -2,7 +2,14 @@
 <div id="test">
 </div>
 <div class="row quiz question one">
-  <div ng-repeat="event in events.filteredEvents" >
-    <p>{{event.description}}</p>
+  <div ng-repeat= "event in events.all">
+    <p><a href="{{event.link}}" target="_blank">{{event.name}}</a></p>
+    <span ng-if="event.group_photo.highres_link">
+     <img ng-src="{{event.group_photo.highres_link}}" alt="photo" />
+    </span>
+    <span ng-if="!event.group_photo.highres_link">
+     <img ng-src="/images/group_image.png" alt="photo" />
+    </span>
+      <!-- <p>{{event.description}}</p> -->
   </div>
 </div>
