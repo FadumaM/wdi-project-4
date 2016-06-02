@@ -10,7 +10,7 @@ angular
       Hobby.get({ id: $stateParams.id}, function(hobby) {
         self.hobby = hobby;
       });
-
+      self.text = "hit";
       self.saveHobby = function() {
         console.log(self.currentUser);
         User.saveHobby({ user: self.currentUser, hobby: self.hobby},

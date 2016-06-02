@@ -4,5 +4,6 @@
     <h2>{{hobby.hobby.name}}</h2>
     <p>{{hobby.hobby.description}}</p>
   </div>
+<button class ="btn btn-default" type="button" name="button" ng-click="hobby.saveHobby(hobby.hobby)" ui-sref="eventIndex({id: hobby.hobby._id})">Save hobby and find your community{{hobby.hobby._id}}</button>
 </div>
-<button class ="btn btn-default" type="button" name="button" ng-click="hobby.saveHobby(hobby.hobby)">Save hobby and find your community</button>
+{{hobby.text}}

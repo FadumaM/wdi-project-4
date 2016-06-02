@@ -50419,8 +50419,8 @@ angular
       .state('eventIndex',{
         url: '/events/:id',
         templateUrl: "/src/js/views/events/index.html",
-        controller: "EventsController",
-        controllerAs: "event"
+        // controller: "EventsController",
+        // controllerAs: "events"
       });
 
     $urlRouterProvider.otherwise("/");
@@ -50491,10 +50491,42 @@ angular
     .module('Hobbyist')
     .controller('EventsController', EventsController);
 
-    EventsController.$inject= ['$http', 'API_URL'];
-    function EventsController ($http, API_URL) {
+    EventsController.$inject= [ '$http', '$stateParams', 'Hobby'];
+    function EventsController( $http, $stateParams, Hobby) {
+      var self = this;
+      self.filteredEvents = [];
+      self.text      = "hi";
+      self.getHobby  = getHobby;
+      self.getEvents = getEvents;
 
-      $http.post();
+      console.log("\nI AM THE EVENTS CONTROLLER: '" + self.text + "'");
+
+      function getHobby(){
+        $http
+        .get('http://localhost:3000/api/hobby/' + $stateParams.id)
+        .then(function(response) {
+          // console.log(response);
+          self.hobby = response.data;
+        });
+      }
+
+      function getEvents(){
+        $http
+        .post('http://localhost:3000/api/events/meetup/', self.hobby)
+        .then(function(response) {
+          console.log(response.data);
+          for(i = 0; i < 20; i++){
+            console.log("This is the response data:''",response.data.results[i]);
+            // self.filteredEvents.push(response.data.results[i]);
+            //  console.log("Inside the loop",self.filteredEvents);
+          }
+          $(test).append("response.data.results[i]");
+          console.log("Outside the loop",self.filteredEvents);
+
+        });
+      }
+      getHobby();
+      getEvents();
 
     }
 
@@ -50557,7 +50589,7 @@ angular
       Hobby.get({ id: $stateParams.id}, function(hobby) {
         self.hobby = hobby;
       });
-
+      self.text = "hit";
       self.saveHobby = function() {
         console.log(self.currentUser);
         User.saveHobby({ user: self.currentUser, hobby: self.hobby},
@@ -50663,7 +50695,6 @@ function Category($resource, API_URL){
     }
   );
 }
-
 
 angular
   .module('Hobbyist')
