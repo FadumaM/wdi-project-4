@@ -1,12 +1,31 @@
-[
-  { "name": "artistic" },
-  { "name": "sports" },
-  { "name": "exercise" },
-  { "name": "martialArts" },
-  { "name": "geek" },
-  { "name": "foodAndDrink" },
-  { "name": "languages" },
-  { "name": "performance" },
-  { "name": "dancing" },
-  { "name": "music" }
-]
+[{
+	"name": "artistic",
+	"text": ["I like to make things with my hands!"]
+}, {
+	"name": "sports",
+	"text": ["I need to be up an active , i'm no couch slouch"]
+}, {
+	"name": "exercise",
+	"text": ["I have a must be win attitude"]
+}, {
+	"name": "martialArts",
+	"text": ["I'm not the type of person you messed with, just saying"]
+}, {
+	"name": "geek",
+	"text":["I love things intensely "]
+}, {
+	"name": "foodAndDrink",
+	"text": ["Food is the way to my heart"]
+}, {
+	"name": "languages",
+	"text": ["Communication on point!!!"]
+}, {
+	"name": "performance",
+	"text": ["I'm defo extroverted!!!"]
+}, {
+	"name": "dancing",
+	"text":["Clock strikes upon the hour And the sun begins to fade Still enough time to figure out How to chase my blues away!!!"]
+}, {
+	"name": "music",
+	"text": ["Music is my religion"]
+}]

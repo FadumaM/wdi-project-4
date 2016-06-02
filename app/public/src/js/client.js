@@ -10,8 +10,9 @@ angular
 
 
  console.log("loaded");
-  MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
-  function MainRouter($stateProvider, $urlRouterProvider) {
+  MainRouter.$inject = ['$stateProvider', '$urlRouterProvider','$locationProvider'];
+  function MainRouter($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $stateProvider
       .state('home', {
         url: "/",

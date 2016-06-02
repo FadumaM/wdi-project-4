@@ -5,10 +5,9 @@
 </div>
 <div class="row quiz question one">
   <div class="col-xs-6 col-md-3" ng-repeat="category in quiz.firstFiveCategories" ng-click="quiz.saveFirstCategory(category)" >
-    <p>{{category.name}}</p>
+    <p>{{ category.text }}</p>
   </div>
 </div>
-
 <div class="row quiz header two">
   <div class="col-xs-10 col-md-10">
     <h1>Category Second Question</h1>
@@ -16,7 +15,7 @@
 </div>
 <div class="row quiz question two">
   <div class="col-xs-6 col-md-3" ng-repeat="category in quiz.secondFiveCategories" ng-click="quiz.saveSecondCategory(category)">
-      <p>{{category.name}}</p>
+      <p>{{ category.text }}</p>
   </div>
 </div>
 
@@ -27,10 +26,10 @@
 </div>
 <div class="row quiz question three">
   <div class="col-xs-6 col-md-3" ng-repeat="category in quiz.savedCategories" ng-click="quiz.saveFinalChosenCategory(category)">
-      <p>{{category.name}}</p>
+      <p>{{category.text}}</p>
   </div>
   <div class="col-xs-10 col-md-10">
-    <button type="button" name="button" class="btn btn-default" ui-sref="hobbyFirstQuestion({id: quiz.chosenCategory._id})">{{quiz.chosenCategory.name}} chosen</button>
+    <button type="button" name="button" class="btn btn-default" ui-sref="hobbyFirstQuestion({id: quiz.chosenCategory._id})">{{quiz.chosenCategory.text}} chosen</button>
   </div>
 </div>
 

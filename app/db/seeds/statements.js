@@ -21,14 +21,21 @@ Object.keys(statementData).forEach(function(statementCategory){
   Category
   .findOne({ name: statementCategory })
   .then(function(category){
+    var statements = [];
     statementData[statementCategory].forEach(function(statement){
       var newStatement = new Statement({
         text: statement.text,
         category: category._id
       });
-      if (!statement.hobby) {
+      statements.push(newStatement);
+
+
+
+      if (!statement.text) {
         newStatement
-        .save()
+        .save(function(err) {
+          if (err) console.log(err);
+        })
         .then(function(savedStatement){
           console.log("[STATEMENT] " + savedStatement.text + " was created");
         })
@@ -36,17 +43,23 @@ Object.keys(statementData).forEach(function(statementCategory){
           console.log("Statement save error:", err);
         });
       } else {
-        Hobby
-        .findOne({name: statement.hobby})
-        .then(function(hobby){
-          newStatement.hobby = hobby._id;
-          newStatement
-          .save()
-          .then(function(savedStatement){
-            console.log("[STATEMENT] " + savedStatement.text + " was created");
-          })
-          .catch(function(err) {
-            console.log("Statement save error:", err);
+        statement.hobbies.forEach(function(statementHobby) {
+          Hobby
+          .findOne({ name: statementHobby})
+          .then(function(hobby) {
+            if (newStatement.hobbies) {
+              newStatement.hobbies.push(hobby._id);
+            } else {
+              newStatement.hobbies = [hobby._id];
+            }
+            newStatement
+            .save()
+            .then(function(savedStatement){
+              console.log("[STATEMENT] " + savedStatement.text + " was created");
+            })
+            .catch(function(err) {
+              console.log("Statement save error:", err);
+            });
           });
         });
       }

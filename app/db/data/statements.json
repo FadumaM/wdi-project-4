@@ -1,100 +1,42 @@
 {
-  "artistic": [
-    {
-      "text": "I like to make things with my hands!",
-      "hobby": "Knitting",
-      "hobby": "Ceramic & Pottery",
-      "hobby": "Painting",
-      "hobby": "Graffiti"
-    }
-  ],
-  "sports": [
-    {
-      "text" : "I love competing",
-      "hobby": "cycling",
-      "hobby": "sailing",
-      "hobby": "running",
-      "hobby": "swimming"
-
-    }
-  ],
-  "exercise": [
-    {
-      "text" : "I need to be up an active , i'm no couch slouch",
-      "hobby": "rockClimbing",
-      "hobby": "skydiving",
-      "hobby": "surfing",
-      "hobby": "skateboarding"
-    }
-  ],
-  "martialArts": [
-    {
-      "text" : "I'm not the type of person to messed with, just saying",
-      "hobby": "taiChi",
-      "hobby": "judo",
-      "hobby": "capoeira",
-      "hobby": "kungFu"
-    }
-
-  ],
-  "geek": [
-    {
-      "text" : "I just love things intensely",
-      "hobby": "comicBooks",
-      "hobby": "chess",
-      "hobby": "poker",
-      "hobby": "videoGame"
-    }
-
-  ],
-  "foodAndDrink": [
-    {
-      "text" : "I just love things intensely",
-      "hobby": "brewing",
-      "hobby": "cheese",
-      "hobby": "cooking-classes",
-      "hobby": "tea"
-    }
-
-  ],
-  "languages": [
-    {
-      "text" : "Communication on point!!!",
-      "hobby": "sign-language",
-      "hobby": "creative-writing",
-      "hobby": "poetry",
-      "hobby": "screen-writing"
-    }
-
-  ],
-  "performance": [
-    {
-      "text" : "I'm defo extroverted!!!",
-      "hobby": "acting",
-      "hobby": "standup-comedy",
-      "hobby": "rapping",
-      "hobby": "improv-comedy-classes"
-    }
-
-  ],
-  "dancing": [
-    {
-      "text" : "Clock strikes upon the hour And the sun begins to fade Still enough time to figure out How to chase my blues away!!!",
-      "hobby": "acting",
-      "hobby": "standup-comedy",
-      "hobby": "rapping",
-      "hobby": "improv-comedy-classes"
-    }
-
-  ],
-  "music": [
-    {
-      "text" : "Music is my religion",
-      "hobby": "Blues",
-      "hobby": "jazz",
-      "hobby": "piano",
-      "hobby": "guiter"
-    }
-
-  ]
+	"artistic": [{
+		"text": "I like to make things with my hands!",
+		"hobbies" : ["knitting","pottery", "painting","graffiti"]
+	}],
+	"sports": [{
+		"text": "I need to be up an active , i'm no couch slouch",
+		"hobbies": ["rockClimbing", "skydiving", "surfing", "skateboarding"]
+	}],
+	"martialArts": [{
+		"text": "I'm not the type of person you messed with, just saying",
+		"hobbies": ["taiChi", "judo", "capoeira", "kungFu"]
+	}],
+	"geek": [{
+		"text": "I just love things intensely",
+		"hobbies": ["poker", "videoGame", "chess", "comicBooks"]
+	}],
+	"foodAndDrink": [{
+		"text": "I just love things intensely",
+		"hobbies": ["brewing", "cheese", "cooking-classes", "tea"]
+	}],
+	"languages": [{
+		"text": "Communication on point!!!",
+		"hobbies": ["sign-language", "creative-writing", "poetry", "screen-writing"]
+	}],
+	"performance": [{
+		"text": "I'm defo extroverted!!!",
+		"hobbies": ["acting", "standup-comedy", "rapping", "improv-comedy-classes"]
+	}],
+	"dancing": [{
+		"text": "Clock strikes upon the hour And the sun begins to fade Still enough time to figure out How to chase my blues away!!!",
+		"hobbies": ["breakDancing", "lineDancing", "pole-dancing", "salsa"]
+	}],
+	"music": [{
+		"text": "Music is my religion",
+		"hobbies": ["blues", "jazz", "piano", "guitar"]
+	}],
+	"exercise": [{
+		"text": "I have a must be win attitude",
+		"hobbies": ["cycling", "sailing", "running", "swimming"]
+	}]
 }

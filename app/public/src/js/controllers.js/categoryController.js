@@ -2,11 +2,11 @@ angular
     .module('Hobbyist')
     .controller('CategoryController', CategoryController);
 
-    CategoryController.$inject = ['Hobby', 'Statement', 'Category'];
+    CategoryController.$inject = ['Hobby', 'Category'];
 
 
 
-    function CategoryController(Hobby, Statement, Category) {
+    function CategoryController(Hobby, Category) {
       // //Binding this to self
       self                              = this;
 
@@ -22,16 +22,18 @@ angular
       self.savedCategories              = [];
       self.chosenCategory               = null;
 
-      Statement.query(function(response) {
-      console.log(response);
-      });
-
 
 
       Category.query(function(response) {
-        self.firstFiveCategories= response;
+        var categories = response.map(function(category) {
+          var text = category.text;
+          category.text = text[Math.floor(Math.random() * text.length)];
+          return category;
+        });
+        self.firstFiveCategories= categories;
         self.secondFiveCategories = self.firstFiveCategories.splice(0,5);
       });
+
 
       function saveFirstCategory(category) {
           self.firstCategory = category;
