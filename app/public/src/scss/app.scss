@@ -1,7 +1,8 @@
 @import "_bower";
 
 body{
-  background-color : #B5C9D4;
+  background-color : #FBCA30;
+  color: white;
   h1{
     font-size: 2.827em;
     font-family: 'Hammersmith One', sans-serif;
@@ -23,7 +24,7 @@ main{
 }
 .container{
   padding: 0px;
-  margin: 0;
+  margin: 0 !important;
 }
 .row {
     margin-right: 0px;
@@ -66,8 +67,8 @@ main{
     margin-bottom: 10px;
     .btn.btn-default{
       margin-right: 5px;
-      background-color: lighten(#FD7E47, 5%);
-      border-color: #FD7E47;
+      background-color: lighten(#FFA500, 5%);
+      border-color: #FFA500;
       color: darken(#ECEDE8, 5%);
     }
   }
@@ -82,59 +83,52 @@ main{
   text-align: center;
   h1{
     font-size: 4em;
-    text-shadow: 0px 4px 6px rgba(150, 150, 150, 1);
-    color: darken(#73777A, 20%);
+    color: white;
   }
   .question1{
     .header{
       text-align: center;
-      // text-transform: uppercase;
     }
     .content{
       margin-top: 20px;
       .col-xs-6.col-md-6{
           width: 190px;
           height: 190px;
-          border: 2px solid black;
           margin: 10px;
           text-align: center;
           display: flex;
           align-items: center;
-          background-color: #FD7E47;
-          border-color: darken(#73777A, 10%);
+          background: #FFA500;
           color: #ECEDE8;
-          border-radius: 10px;
+          border-radius: 0 10px;
       }
       .col-xs-6.col-md-6:hover{
         cursor:pointer;
-        background-color: lighten(#73777A, 10%);
-
+        background: #FF4500;
       }
     }
   }
   .question2{
     .header{
       text-align: center;
-      // text-transform: uppercase;
     }
     .content{
       margin-top: 20px;
       .col-xs-6.col-md-6{
           width: 190px;
           height: 190px;
-          border: 2px solid black;
           margin: 10px;
           text-align: center;
           display: flex;
           align-items: center;
-          background-color: #FD7E47;
+          background-color: #FFA500;
           border-color: darken(#73777A, 10%);
           color: #ECEDE8;
-          border-radius: 10px;
+          border-radius: 0 10px;
       }
       .col-xs-6.col-md-6:hover{
         cursor:pointer;
-        background-color: lighten(#73777A, 10%);
+        background: #FF4500;
 
       }
     }
@@ -146,26 +140,24 @@ main{
     align-items: center;
     .header{
       text-align: center;
-      // text-transform: uppercase;
     }
     .content{
       margin-top: 20px;
       .col-xs-8.col-md-8{
           width: 190px;
           height: 190px;
-          border: 2px solid black;
           margin: 10px;
           text-align: center;
           display: flex;
           align-items: center;
-          background-color: #FD7E47;
+          background-color: #FFA500;
           border-color: darken(#73777A, 10%);
           color: #ECEDE8;
-          border-radius: 10px;
+          border-radius: 0 10px;
       }
       .col-xs-8.col-md-8:hover{
         cursor:pointer;
-        background-color: lighten(#73777A, 10%);
+        background: #FF4500;
 
       }
     }
@@ -183,32 +175,29 @@ main{
   text-align: center;
   h1{
     font-size: 4em;
-    text-shadow: 0px 4px 6px rgba(150, 150, 150, 1);
-    color: darken(#73777A, 20%);
+    color: white;
   }
   .question1{
     .header{
       text-align: center;
-      // text-transform: uppercase;
     }
     .content{
       margin-top: 20px;
       .col-xs-6.col-md-6{
           width: 190px;
           height: 190px;
-          border: 2px solid black;
           margin: 10px;
           text-align: center;
           display: flex;
           align-items: center;
-          background-color: #FD7E47;
+          background-color: #FFA500;
           border-color: darken(#73777A, 10%);
           color: #ECEDE8;
-          border-radius: 10px;
+          border-radius: 0 10px;
       }
       .col-xs-6.col-md-6:hover{
         cursor:pointer;
-        background-color: lighten(#73777A, 10%);
+        background: #FF4500;
 
       }
     }
@@ -216,26 +205,24 @@ main{
   .question2{
     .header{
       text-align: center;
-      // text-transform: uppercase;
     }
     .content{
       margin-top: 20px;
       .col-xs-6.col-md-6{
           width: 190px;
           height: 190px;
-          border: 2px solid black;
           margin: 10px;
           text-align: center;
           display: flex;
           align-items: center;
-          background-color: #FD7E47;
+          background-color: #FFA500;
           border-color: darken(#73777A, 10%);
           color: #ECEDE8;
-          border-radius: 10px;
+          border-radius: 0 10px;
       }
       .col-xs-6.col-md-6:hover{
         cursor:pointer;
-        background-color: lighten(#73777A, 10%);
+        background: #FF4500;
 
       }
     }
@@ -247,26 +234,24 @@ main{
     align-items: center;
     .header{
       text-align: center;
-      // text-transform: uppercase;
     }
     .content{
       margin-top: 20px;
       .col-xs-8.col-md-8{
           width: 190px;
           height: 190px;
-          border: 2px solid black;
           margin: 10px;
           text-align: center;
           display: flex;
           align-items: center;
-          background-color: #FD7E47;
+          background-color: #FFA500;
           border-color: darken(#73777A, 10%);
           color: #ECEDE8;
-          border-radius: 10px;
+          border-radius: 0 10px;
       }
       .col-xs-8.col-md-8:hover{
         cursor:pointer;
-        background-color: lighten(#73777A, 10%);
+        background: #FF4500;
 
       }
     }
@@ -280,8 +265,7 @@ main{
   text-align: center;
   .header{
     font-size: 2em;
-    text-shadow: 0px 4px 6px rgba(150, 150, 150, 1);
-    color: darken(#73777A, 20%);
+    color: white;
   }
   .content{
 
@@ -291,9 +275,37 @@ main{
   }
 }
 
-
-
 img{
   width: 100px;
   height: 100px;
+}
+
+.btn-default {
+  border: 0;
+  border-radius: 0 10px;
+  color: #FFA500;
+
+  &:hover{
+    background: #FF4500;
+    color: white;
+  }
+}
+
+a {
+  background: white;
+  color: #FBCA30;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 0 10px;
+}
+
+a:hover, a:focus {
+  background: #FF4500;
+  color: white;
+  text-decoration: none;
+}
+
+.events img {
+  border-radius: 100%;
+  margin: 10px;
 }

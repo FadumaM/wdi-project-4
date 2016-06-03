@@ -7945,7 +7945,8 @@ button.close {
 
 /*# sourceMappingURL=bootstrap.css.map */
 body {
-  background-color: #B5C9D4;
+  background-color: #FBCA30;
+  color: white;
 }
 
 body h1 {
@@ -7971,7 +7972,7 @@ main {
 
 .container {
   padding: 0px;
-  margin: 0;
+  margin: 0 !important;
 }
 
 .row {
@@ -8021,8 +8022,8 @@ main {
 
 .row.home.ng-scope .row.button .btn.btn-default {
   margin-right: 5px;
-  background-color: #fd9060;
-  border-color: #FD7E47;
+  background-color: #ffae1a;
+  border-color: #FFA500;
   color: #e0e2da;
 }
 
@@ -8038,8 +8039,7 @@ main {
 
 .quiz.category.ng-scope h1 {
   font-size: 4em;
-  text-shadow: 0px 4px 6px #969696;
-  color: #424445;
+  color: white;
 }
 
 .quiz.category.ng-scope .question1 .header {
@@ -8053,20 +8053,18 @@ main {
 .quiz.category.ng-scope .question1 .content .col-xs-6.col-md-6 {
   width: 190px;
   height: 190px;
-  border: 2px solid black;
   margin: 10px;
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #FD7E47;
-  border-color: #5a5d60;
+  background: #FFA500;
   color: #ECEDE8;
-  border-radius: 10px;
+  border-radius: 0 10px;
 }
 
 .quiz.category.ng-scope .question1 .content .col-xs-6.col-md-6:hover {
   cursor: pointer;
-  background-color: #8d9093;
+  background: #FF4500;
 }
 
 .quiz.category.ng-scope .question2 .header {
@@ -8080,20 +8078,19 @@ main {
 .quiz.category.ng-scope .question2 .content .col-xs-6.col-md-6 {
   width: 190px;
   height: 190px;
-  border: 2px solid black;
   margin: 10px;
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #FD7E47;
+  background-color: #FFA500;
   border-color: #5a5d60;
   color: #ECEDE8;
-  border-radius: 10px;
+  border-radius: 0 10px;
 }
 
 .quiz.category.ng-scope .question2 .content .col-xs-6.col-md-6:hover {
   cursor: pointer;
-  background-color: #8d9093;
+  background: #FF4500;
 }
 
 .quiz.category.ng-scope .question3 {
@@ -8113,20 +8110,19 @@ main {
 .quiz.category.ng-scope .question3 .content .col-xs-8.col-md-8 {
   width: 190px;
   height: 190px;
-  border: 2px solid black;
   margin: 10px;
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #FD7E47;
+  background-color: #FFA500;
   border-color: #5a5d60;
   color: #ECEDE8;
-  border-radius: 10px;
+  border-radius: 0 10px;
 }
 
 .quiz.category.ng-scope .question3 .content .col-xs-8.col-md-8:hover {
   cursor: pointer;
-  background-color: #8d9093;
+  background: #FF4500;
 }
 
 .quiz.hobby.ng-scope {
@@ -8141,8 +8137,7 @@ main {
 
 .quiz.hobby.ng-scope h1 {
   font-size: 4em;
-  text-shadow: 0px 4px 6px #969696;
-  color: #424445;
+  color: white;
 }
 
 .quiz.hobby.ng-scope .question1 .header {
@@ -8156,20 +8151,19 @@ main {
 .quiz.hobby.ng-scope .question1 .content .col-xs-6.col-md-6 {
   width: 190px;
   height: 190px;
-  border: 2px solid black;
   margin: 10px;
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #FD7E47;
+  background-color: #FFA500;
   border-color: #5a5d60;
   color: #ECEDE8;
-  border-radius: 10px;
+  border-radius: 0 10px;
 }
 
 .quiz.hobby.ng-scope .question1 .content .col-xs-6.col-md-6:hover {
   cursor: pointer;
-  background-color: #8d9093;
+  background: #FF4500;
 }
 
 .quiz.hobby.ng-scope .question2 .header {
@@ -8183,20 +8177,19 @@ main {
 .quiz.hobby.ng-scope .question2 .content .col-xs-6.col-md-6 {
   width: 190px;
   height: 190px;
-  border: 2px solid black;
   margin: 10px;
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #FD7E47;
+  background-color: #FFA500;
   border-color: #5a5d60;
   color: #ECEDE8;
-  border-radius: 10px;
+  border-radius: 0 10px;
 }
 
 .quiz.hobby.ng-scope .question2 .content .col-xs-6.col-md-6:hover {
   cursor: pointer;
-  background-color: #8d9093;
+  background: #FF4500;
 }
 
 .quiz.hobby.ng-scope .question3 {
@@ -8216,20 +8209,19 @@ main {
 .quiz.hobby.ng-scope .question3 .content .col-xs-8.col-md-8 {
   width: 190px;
   height: 190px;
-  border: 2px solid black;
   margin: 10px;
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #FD7E47;
+  background-color: #FFA500;
   border-color: #5a5d60;
   color: #ECEDE8;
-  border-radius: 10px;
+  border-radius: 0 10px;
 }
 
 .quiz.hobby.ng-scope .question3 .content .col-xs-8.col-md-8:hover {
   cursor: pointer;
-  background-color: #8d9093;
+  background: #FF4500;
 }
 
 .row.show {
@@ -8240,11 +8232,40 @@ main {
 
 .row.show .header {
   font-size: 2em;
-  text-shadow: 0px 4px 6px #969696;
-  color: #424445;
+  color: white;
 }
 
 img {
   width: 100px;
   height: 100px;
+}
+
+.btn-default {
+  border: 0;
+  border-radius: 0 10px;
+  color: #FFA500;
+}
+
+.btn-default:hover {
+  background: #FF4500;
+  color: white;
+}
+
+a {
+  background: white;
+  color: #FBCA30;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 0 10px;
+}
+
+a:hover, a:focus {
+  background: #FF4500;
+  color: white;
+  text-decoration: none;
+}
+
+.events img {
+  border-radius: 100%;
+  margin: 10px;
 }
