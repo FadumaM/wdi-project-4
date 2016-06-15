@@ -1,6 +1,6 @@
 angular
   .module('Hobbyist', ['angular-jwt', 'ngResource', 'satellizer','ui.router'])
-  .constant('API_URL', 'https://hobbyist-app.herokuapp.com/api')
+  .constant('API_URL', 'http://hobbyist-app.herokuapp.com/api')
   .constant('facebookClientId', '1812062232347280')
   .config(MainRouter)
   .config(oauthConfig)
