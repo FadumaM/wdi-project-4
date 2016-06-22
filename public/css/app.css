@@ -8015,10 +8015,38 @@ main {
 }
 
 #image {
-  background-image: url("/images/skydiving.jpg");
+  background-image: url("/images/art.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+
+.jumbotron {
+  text-shadow: -1px 1px 1px #323c42;
+  background-color: rgba(251, 202, 48, 0.28);
+}
+
+.row.show {
+  height: 100vh;
+  background-image: url("/images/joy.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.row.show .jumbotron {
+  margin-top: 50px;
+}
+
+.row.show h2 {
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row.show .btn.btn-default {
+  margin-top: 20px;
 }
 
 .row.home.ng-scope {
@@ -8028,11 +8056,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.row.home.ng-scope .jumbotron {
-  text-shadow: -1px 1px 1px #323c42;
-  background-color: rgba(251, 202, 48, 0.28);
 }
 
 .row.home.ng-scope .row.header {
@@ -8080,7 +8103,6 @@ main {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   text-align: center;
 }
@@ -8091,10 +8113,11 @@ main {
 }
 
 .quiz.ng-scope .question.col-md-12 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+}
+
+.quiz.ng-scope .question p {
+  width: 100%;
 }
 
 .quiz.ng-scope .question .header {
@@ -8103,11 +8126,9 @@ main {
 
 .quiz.ng-scope .question .content {
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
 }
 
-.quiz.ng-scope .question .content .col-xs-10.col-md-2 {
+.quiz.ng-scope .question .content .box {
   height: 190px;
   margin: 10px;
   text-align: center;
@@ -8162,6 +8183,24 @@ a:hover, a:focus {
   background: #FF4500;
   color: white;
   text-decoration: none;
+}
+
+.events h1 {
+  margin-bottom: 40px;
+}
+
+.events .eachEvent {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.events .makeGroup {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.events .makeGroup .text {
+  margin-bottom: 20px;
 }
 
 .events img {

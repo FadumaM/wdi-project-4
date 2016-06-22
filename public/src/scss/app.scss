@@ -65,11 +65,37 @@ main{
 
 
 #image{
-  background-image: url('/images/skydiving.jpg');
+  background-image: url('/images/art.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 }
+
+.jumbotron{
+  text-shadow: -1px 1px 1px rgb(50, 60, 66);
+  background-color: rgba(251, 202, 48, 0.28);
+}
+
+.row.show{
+  height: 100vh;
+  background-image: url('/images/joy.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  .jumbotron{
+    margin-top: 50px;
+  }
+  h2{
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn.btn-default{
+    margin-top: 20px;
+  }
+}
+
 .row.home.ng-scope{
   width: 100vw;
   height: 100vh;
@@ -78,10 +104,6 @@ main{
   align-items: center;
   flex-direction: column;
 
-  .jumbotron{
-    text-shadow: -1px 1px 1px rgb(50, 60, 66);
-    background-color: rgba(251, 202, 48, 0.28);
-  }
   .row.header{
     width: 100vw;
     text-align: center;
@@ -121,7 +143,6 @@ main{
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   text-align: center;
   h1{
@@ -129,20 +150,19 @@ main{
     color: white;
   }
   .question.col-md-12 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     flex-direction: column;
   }
   .question{
+    p{
+      width: 100%;
+    }
     .header{
       text-align: center;
     }
     .content{
       margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      .col-xs-10.col-md-2{
+      .box{
           height: 190px;
           margin: 10px;
           text-align: center;
@@ -207,9 +227,26 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+.events {
+  h1{
+    margin-bottom: 40px;
+  }
+  .eachEvent{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .makeGroup{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    .text{
+      margin-bottom: 20px;
+    }
+  }
+}
 .events img {
   border-radius: 100%;
   margin: 10px;
+
 }
 
   @media(min-width:768px){

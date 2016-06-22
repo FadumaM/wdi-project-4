@@ -10,11 +10,11 @@ angular
 
       function getEvents(){
         $http
-        .get('https://hobbyist-app.herokuapp.com/api/hobby/' + $stateParams.id)
+        .get('http://localhost:3000/api/hobby/' + $stateParams.id)
         .then(function(response) {
           var hobby = response.data.name;
           console.log("HOBBY!", hobby);
-          return $http.post('https://hobbyist-app.herokuapp.com/api/events/meetup/' + hobby);
+          return $http.post('http://localhost:3000/api/events/meetup/' + hobby);
         })
         .then(function(response) {
         self.all = response.data.results;

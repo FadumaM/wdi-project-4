@@ -18,7 +18,8 @@
 	"text": ["Food is the way to my heart"]
 }, {
 	"name": "languages",
-	"text": ["Communication on point!!!"]
+	"text": ["Communication on point!!!"],
+	"image": "/images/languages.jpg"
 }, {
 	"name": "performance",
 	"text": ["I'm defo extroverted!!!"]

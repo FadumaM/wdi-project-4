@@ -4,8 +4,8 @@
         <h1 class="animated fadeIn">Which statement fits you best?</h1>
     </div>
     <ul class="quiz content col-md-12">
-      <li class="col-xs-10 col-sm-6 col-md-2 animated bounceIn" ng-repeat="hobby in quiz.firstTwoHobbies" ng-click="quiz.saveFirstHobby(hobby)">
-          <p>{{hobby.text}}</p>
+      <li class="box col-sm-12 col-md-12  animated bounceIn" ng-repeat="hobby in quiz.firstTwoHobbies" ng-click="quiz.saveFirstHobby(hobby)">
+          <p class="text-center">{{hobby.text}}</p>
       </li>
     </ul>
   </div>
@@ -14,8 +14,8 @@
         <h1>What about these?</h1>
     </div>
     <ul class="quiz content col-md-12">
-      <li class="col-xs-10 col-sm-6 col-md-2 animated bounceIn" ng-repeat="hobby in quiz.secondTwoHobbies" ng-click="quiz.saveSecondHobby(hobby)">
-          <p>{{hobby.text}}</p>
+      <li class="box col-sm-12 col-md-12  animated bounceIn" ng-repeat="hobby in quiz.secondTwoHobbies" ng-click="quiz.saveSecondHobby(hobby)">
+          <p class="text-center">{{hobby.text}}</p>
       </li>
     </ul>
   </div>
@@ -24,8 +24,8 @@
         <h1>OK, now you have to pick!</h1>
     </div>
     <ul class="quiz content col-md-12">
-      <li class="col-xs-10 col-sm-6 col-md-2 animated bounceIn" ng-repeat="hobby in quiz.savedHobbies" ng-click="quiz.saveFinalHobby(hobby)">
-          <p>{{hobby.text}}</p>
+      <li class="box col-sm-12 col-md-12 animated bounceIn" ng-repeat="hobby in quiz.savedHobbies" ng-click="quiz.saveFinalHobby(hobby)">
+          <p class="text-center">{{hobby.text}}</p>
       </li>
     </ul>
     <div class="col-xs-12 col-md-12">
