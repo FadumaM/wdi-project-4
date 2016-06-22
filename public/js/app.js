@@ -50365,7 +50365,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
 
 angular
   .module('Hobbyist', ['angular-jwt', 'ngResource', 'satellizer','ui.router'])
-  .constant('API_URL', 'https://hobbyist-app.herokuapp.com/api')
+  .constant('API_URL', 'http://localhost:3000/api')
   .constant('facebookClientId', '1812062232347280')
   .config(MainRouter)
   .config(oauthConfig)
@@ -50373,8 +50373,6 @@ angular
     $httpProvider.interceptors.push('authInterceptor');
   });
 
-
- console.log("loaded");
   MainRouter.$inject = ['$stateProvider', '$urlRouterProvider','$locationProvider'];
   function MainRouter($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -50382,30 +50380,36 @@ angular
       .state('home', {
         url: "/",
         templateUrl: "/src/js/views/home.html",
-        controller: "UsersController",
-        controllerAs: "user"
+        // controller: "UsersController",
+        // controllerAs: "user"
+      })
+      .state('profile', {
+        url: "/profile",
+        templateUrl: "/src/js/views/user/show.html",
+        // controller: "UsersController",
+        // controllerAs: "user"
       })
       .state('login', {
         url: "/login",
         templateUrl: "/src/js/views/authentication/login.html",
-        controller: "UsersController",
-        controllerAs: "user"
+        // controller: "UsersController",
+        // controllerAs: "user"
       })
       .state('register', {
         url: "/register",
         templateUrl: "/src/js/views/authentication/register.html",
-        controller: "UsersController",
-        controllerAs: "user"
+        // controller: "UsersController",
+        // controllerAs: "user"
       })
       .state('categoryFirstQuestion',{
         url: '/quiz',
-        templateUrl: "/src/js/views/quiz/category/Questions.html",
+        templateUrl: "/src/js/views/quiz/category/questions.html",
         controller: "CategoryController",
         controllerAs: "quiz"
       })
       .state('hobbyFirstQuestion',{
         url: '/quiz/:id',
-        templateUrl: "/src/js/views/quiz/hobby/Questions.html",
+        templateUrl: "/src/js/views/quiz/hobby/questions.html",
         controller: "HobbyController",
         controllerAs: "quiz"
       })
@@ -50830,3 +50834,8 @@ angular
       }
     }
   }
+
+
+$(document).ready(function() {
+  console.log("hello");
+});

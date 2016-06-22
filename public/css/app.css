@@ -7944,41 +7944,82 @@ button.close {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
-body {
+html, body {
   background-color: #FBCA30;
   color: white;
+  overflow: hidden;
 }
 
-body h1 {
+html h1, body h1 {
   font-size: 2.827em;
   font-family: 'Hammersmith One', sans-serif;
 }
 
-body h2 {
+html h2, body h2 {
   font-size: 1.999em;
   font-family: 'Hammersmith One', sans-serif;
 }
 
-body p {
+html p, body p {
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
 }
 
+.navbar.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+
+.navbar.navbar-default .navbar-brand {
+  background-color: transparent;
+  color: #ab8d2e;
+}
+
+.navbar.navbar-default .navbar-nav > li > a:hover {
+  color: #FF4500;
+  background-color: transparent;
+}
+
 main {
   width: 100vw;
   height: 100vh;
+  margin: 0 !important;
 }
 
 .container {
-  padding: 0px;
   margin: 0 !important;
 }
 
 .row {
   margin-right: 0px;
   width: 100vw;
-  height: 100vh;
+}
+
+.row.form {
+  display: flex;
+  justify-content: center;
+}
+
+.row.form h1 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.row.form .form-group {
+  margin-top: 50px;
+}
+
+.row.form .btn.btn-default {
+  margin-top: 10px;
+}
+
+#image {
+  background-image: url("/images/skydiving.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .row.home.ng-scope {
@@ -7990,11 +8031,15 @@ main {
   flex-direction: column;
 }
 
+.row.home.ng-scope .jumbotron {
+  text-shadow: -1px 1px 1px #323c42;
+  background-color: rgba(251, 202, 48, 0.28);
+}
+
 .row.home.ng-scope .row.header {
   width: 100vw;
   text-align: center;
   margin-bottom: 10px;
-  color: #5a5d60;
 }
 
 .row.home.ng-scope .row.header img {
@@ -8014,6 +8059,10 @@ main {
   padding: 10px;
 }
 
+.row.home.ng-scope .quiz {
+  margin-top: 20px;
+}
+
 .row.home.ng-scope .row.button {
   width: 100vw;
   text-align: center;
@@ -8027,7 +8076,7 @@ main {
   color: #e0e2da;
 }
 
-.quiz.category.ng-scope {
+.quiz.ng-scope {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -8037,21 +8086,29 @@ main {
   text-align: center;
 }
 
-.quiz.category.ng-scope h1 {
+.quiz.ng-scope h1 {
   font-size: 4em;
   color: white;
 }
 
-.quiz.category.ng-scope .question1 .header {
+.quiz.ng-scope .question.col-md-12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quiz.ng-scope .question .header {
   text-align: center;
 }
 
-.quiz.category.ng-scope .question1 .content {
+.quiz.ng-scope .question .content {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.quiz.category.ng-scope .question1 .content .col-xs-6.col-md-6 {
-  width: 190px;
+.quiz.ng-scope .question .content .col-xs-10.col-md-2 {
   height: 190px;
   margin: 10px;
   text-align: center;
@@ -8062,164 +8119,7 @@ main {
   border-radius: 0 10px;
 }
 
-.quiz.category.ng-scope .question1 .content .col-xs-6.col-md-6:hover {
-  cursor: pointer;
-  background: #FF4500;
-}
-
-.quiz.category.ng-scope .question2 .header {
-  text-align: center;
-}
-
-.quiz.category.ng-scope .question2 .content {
-  margin-top: 20px;
-}
-
-.quiz.category.ng-scope .question2 .content .col-xs-6.col-md-6 {
-  width: 190px;
-  height: 190px;
-  margin: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background-color: #FFA500;
-  border-color: #5a5d60;
-  color: #ECEDE8;
-  border-radius: 0 10px;
-}
-
-.quiz.category.ng-scope .question2 .content .col-xs-6.col-md-6:hover {
-  cursor: pointer;
-  background: #FF4500;
-}
-
-.quiz.category.ng-scope .question3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.quiz.category.ng-scope .question3 .header {
-  text-align: center;
-}
-
-.quiz.category.ng-scope .question3 .content {
-  margin-top: 20px;
-}
-
-.quiz.category.ng-scope .question3 .content .col-xs-8.col-md-8 {
-  width: 190px;
-  height: 190px;
-  margin: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background-color: #FFA500;
-  border-color: #5a5d60;
-  color: #ECEDE8;
-  border-radius: 0 10px;
-}
-
-.quiz.category.ng-scope .question3 .content .col-xs-8.col-md-8:hover {
-  cursor: pointer;
-  background: #FF4500;
-}
-
-.quiz.hobby.ng-scope {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.quiz.hobby.ng-scope h1 {
-  font-size: 4em;
-  color: white;
-}
-
-.quiz.hobby.ng-scope .question1 .header {
-  text-align: center;
-}
-
-.quiz.hobby.ng-scope .question1 .content {
-  margin-top: 20px;
-}
-
-.quiz.hobby.ng-scope .question1 .content .col-xs-6.col-md-6 {
-  width: 190px;
-  height: 190px;
-  margin: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background-color: #FFA500;
-  border-color: #5a5d60;
-  color: #ECEDE8;
-  border-radius: 0 10px;
-}
-
-.quiz.hobby.ng-scope .question1 .content .col-xs-6.col-md-6:hover {
-  cursor: pointer;
-  background: #FF4500;
-}
-
-.quiz.hobby.ng-scope .question2 .header {
-  text-align: center;
-}
-
-.quiz.hobby.ng-scope .question2 .content {
-  margin-top: 20px;
-}
-
-.quiz.hobby.ng-scope .question2 .content .col-xs-6.col-md-6 {
-  width: 190px;
-  height: 190px;
-  margin: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background-color: #FFA500;
-  border-color: #5a5d60;
-  color: #ECEDE8;
-  border-radius: 0 10px;
-}
-
-.quiz.hobby.ng-scope .question2 .content .col-xs-6.col-md-6:hover {
-  cursor: pointer;
-  background: #FF4500;
-}
-
-.quiz.hobby.ng-scope .question3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.quiz.hobby.ng-scope .question3 .header {
-  text-align: center;
-}
-
-.quiz.hobby.ng-scope .question3 .content {
-  margin-top: 20px;
-}
-
-.quiz.hobby.ng-scope .question3 .content .col-xs-8.col-md-8 {
-  width: 190px;
-  height: 190px;
-  margin: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background-color: #FFA500;
-  border-color: #5a5d60;
-  color: #ECEDE8;
-  border-radius: 0 10px;
-}
-
-.quiz.hobby.ng-scope .question3 .content .col-xs-8.col-md-8:hover {
+.quiz.ng-scope .question .content .col-xs-2.col-md-2:hover {
   cursor: pointer;
   background: #FF4500;
 }
@@ -8268,4 +8168,10 @@ a:hover, a:focus {
 .events img {
   border-radius: 100%;
   margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 100vw;
+  }
 }

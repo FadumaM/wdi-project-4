@@ -1,8 +1,9 @@
 @import "_bower";
 
-body{
+html, body{
   background-color : #FBCA30;
   color: white;
+  overflow: hidden;
   h1{
     font-size: 2.827em;
     font-family: 'Hammersmith One', sans-serif;
@@ -17,23 +18,58 @@ body{
     font-weight: lighter;
   }
 }
+
+.navbar.navbar-default{
+  background-color: transparent;
+  border-color: transparent;
+  margin-bottom: 0px;
+  .navbar-brand{
+    background-color: transparent;
+    color: #ab8d2e;
+  }
+  .navbar-nav > li > a:hover{
+     color: #FF4500;
+     background-color: transparent;
+ }
+}
+
+
+
 main{
   width: 100vw;
   height: 100vh;
-
+  margin: 0 !important;
 }
 .container{
-  padding: 0px;
   margin: 0 !important;
 }
 .row {
     margin-right: 0px;
     width: 100vw;
-    height: 100vh;
+}
+
+.row.form{
+  display: flex;
+  justify-content: center;
+  h1{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .form-group {
+    margin-top: 50px;
+  }
+  .btn.btn-default{
+    margin-top: 10px;
+  }
 }
 
 
-
+#image{
+  background-image: url('/images/skydiving.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 .row.home.ng-scope{
   width: 100vw;
   height: 100vh;
@@ -41,11 +77,15 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  .jumbotron{
+    text-shadow: -1px 1px 1px rgb(50, 60, 66);
+    background-color: rgba(251, 202, 48, 0.28);
+  }
   .row.header{
     width: 100vw;
     text-align: center;
     margin-bottom: 10px;
-    color: darken(#73777A, 10%);
     img{
       margin-top: 10px;
     }
@@ -61,6 +101,9 @@ main{
       padding: 10px;
     }
   }
+  .quiz{
+    margin-top: 20px;
+  }
   .row.button{
     width: 100vw;
     text-align: center;
@@ -73,7 +116,7 @@ main{
     }
   }
 }
-.quiz.category.ng-scope{
+.quiz.ng-scope{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -85,14 +128,21 @@ main{
     font-size: 4em;
     color: white;
   }
-  .question1{
+  .question.col-md-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .question{
     .header{
       text-align: center;
     }
     .content{
       margin-top: 20px;
-      .col-xs-6.col-md-6{
-          width: 190px;
+      display: flex;
+      justify-content: center;
+      .col-xs-10.col-md-2{
           height: 190px;
           margin: 10px;
           text-align: center;
@@ -102,157 +152,9 @@ main{
           color: #ECEDE8;
           border-radius: 0 10px;
       }
-      .col-xs-6.col-md-6:hover{
+      .col-xs-2.col-md-2:hover{
         cursor:pointer;
         background: #FF4500;
-      }
-    }
-  }
-  .question2{
-    .header{
-      text-align: center;
-    }
-    .content{
-      margin-top: 20px;
-      .col-xs-6.col-md-6{
-          width: 190px;
-          height: 190px;
-          margin: 10px;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          background-color: #FFA500;
-          border-color: darken(#73777A, 10%);
-          color: #ECEDE8;
-          border-radius: 0 10px;
-      }
-      .col-xs-6.col-md-6:hover{
-        cursor:pointer;
-        background: #FF4500;
-
-      }
-    }
-
-  }
-  .question3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .header{
-      text-align: center;
-    }
-    .content{
-      margin-top: 20px;
-      .col-xs-8.col-md-8{
-          width: 190px;
-          height: 190px;
-          margin: 10px;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          background-color: #FFA500;
-          border-color: darken(#73777A, 10%);
-          color: #ECEDE8;
-          border-radius: 0 10px;
-      }
-      .col-xs-8.col-md-8:hover{
-        cursor:pointer;
-        background: #FF4500;
-
-      }
-    }
-  }
-
-}
-
-.quiz.hobby.ng-scope{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  h1{
-    font-size: 4em;
-    color: white;
-  }
-  .question1{
-    .header{
-      text-align: center;
-    }
-    .content{
-      margin-top: 20px;
-      .col-xs-6.col-md-6{
-          width: 190px;
-          height: 190px;
-          margin: 10px;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          background-color: #FFA500;
-          border-color: darken(#73777A, 10%);
-          color: #ECEDE8;
-          border-radius: 0 10px;
-      }
-      .col-xs-6.col-md-6:hover{
-        cursor:pointer;
-        background: #FF4500;
-
-      }
-    }
-  }
-  .question2{
-    .header{
-      text-align: center;
-    }
-    .content{
-      margin-top: 20px;
-      .col-xs-6.col-md-6{
-          width: 190px;
-          height: 190px;
-          margin: 10px;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          background-color: #FFA500;
-          border-color: darken(#73777A, 10%);
-          color: #ECEDE8;
-          border-radius: 0 10px;
-      }
-      .col-xs-6.col-md-6:hover{
-        cursor:pointer;
-        background: #FF4500;
-
-      }
-    }
-
-  }
-  .question3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .header{
-      text-align: center;
-    }
-    .content{
-      margin-top: 20px;
-      .col-xs-8.col-md-8{
-          width: 190px;
-          height: 190px;
-          margin: 10px;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          background-color: #FFA500;
-          border-color: darken(#73777A, 10%);
-          color: #ECEDE8;
-          border-radius: 0 10px;
-      }
-      .col-xs-8.col-md-8:hover{
-        cursor:pointer;
-        background: #FF4500;
-
       }
     }
   }
@@ -309,3 +211,12 @@ a:hover, a:focus {
   border-radius: 100%;
   margin: 10px;
 }
+
+  @media(min-width:768px){
+    .container {
+      width: 100vw;
+    }
+    .row.form {
+
+    }
+  }
