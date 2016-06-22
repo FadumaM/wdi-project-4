@@ -50502,7 +50502,6 @@ angular
         .get('https://hobbyist-app.herokuapp.com/api/hobby/' + $stateParams.id)
         .then(function(response) {
           var hobby = response.data.name;
-          console.log("HOBBY!", hobby);
           return $http.post('https://hobbyist-app.herokuapp.com/api/events/meetup/' + hobby);
         })
         .then(function(response) {
@@ -50555,12 +50554,10 @@ angular
       function saveFirstHobby(hobby) {
         self.firstHobby = hobby;
         self.savedHobbies.push(self.firstHobby);
-        console.log(self.savedHobbies);
       }
       function saveSecondHobby(hobby) {
         self.secondHobby = hobby;
         self.savedHobbies.push(self.secondHobby);
-        console.log(self.savedHobbies);
       }
 
       function saveFinalHobby(hobby) {
@@ -50576,16 +50573,13 @@ angular
     function ShowHobbyController(User, Hobby, $stateParams, CurrentUser) {
       self = this;
       self.currentUser = CurrentUser.getUser();
-      console.log("this is the params",$stateParams);
       Hobby.get({ id: $stateParams.id}, function(hobby) {
         self.hobby = hobby;
       });
       self.text = "hit";
       self.saveHobby = function() {
-        console.log(self.currentUser);
         User.saveHobby({ user: self.currentUser, hobby: self.hobby},
           function(response) {
-            console.log(response);
           });
         };
     }
@@ -50652,7 +50646,6 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
 
     function checkLoggedIn() {
         self.currentUser = CurrentUser.getUser();
-        console.log(self.currentUser);
         return !!self.currentUser;
     }
 

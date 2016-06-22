@@ -60,7 +60,6 @@ function UsersController(User, CurrentUser, $state, $stateParams, $auth) {
 
     function checkLoggedIn() {
         self.currentUser = CurrentUser.getUser();
-        console.log(self.currentUser);
         return !!self.currentUser;
     }
 

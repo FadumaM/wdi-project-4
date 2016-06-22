@@ -21,7 +21,6 @@ function getMeetUpEvents(req, res) {
 
   return rp(options)
     .then(function(response) {
-      // console.log(response);
       return res.status(200).send(response);
     })
     .catch(function(err) {

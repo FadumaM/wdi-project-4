@@ -36,12 +36,10 @@ angular
       function saveFirstHobby(hobby) {
         self.firstHobby = hobby;
         self.savedHobbies.push(self.firstHobby);
-        console.log(self.savedHobbies);
       }
       function saveSecondHobby(hobby) {
         self.secondHobby = hobby;
         self.savedHobbies.push(self.secondHobby);
-        console.log(self.savedHobbies);
       }
 
       function saveFinalHobby(hobby) {

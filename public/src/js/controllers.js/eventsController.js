@@ -13,7 +13,6 @@ angular
         .get('https://hobbyist-app.herokuapp.com/api/hobby/' + $stateParams.id)
         .then(function(response) {
           var hobby = response.data.name;
-          console.log("HOBBY!", hobby);
           return $http.post('https://hobbyist-app.herokuapp.com/api/events/meetup/' + hobby);
         })
         .then(function(response) {
